@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import styles from './Login.module.scss';
 import Stars from '@/src/component/stars/Stars';
 import Image from 'next/image';
+import Selector from './component/Selector';
 
 export default function page() {
 	const [input, setinput] = useState("")
@@ -16,13 +17,13 @@ export default function page() {
 			<Stars />
 			<section>
 				<div>
-
-				<Image
-					width={500}
-					height={500}
-					alt='circule'
-					src="/assets/Circulo.svg"
-				/>
+					<Image
+						width={500}
+						height={500}
+						alt='circule'
+						src="/assets/Circulo.svg"
+					/>
+					<Selector/>
 				</div>
 				<div>
 					{/* 
