@@ -1,0 +1,24 @@
+.container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(9, 10, 19);
+    section {
+        &:first-of-type {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+
+            div{
+                border: 5px solid white;
+                width: 25vw;
+                height: 25vw;
+            }
+        }
+    
+        &:nth-of-type(2) {
+            width: 50%;
+        }
+    }
+}

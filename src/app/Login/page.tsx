@@ -2,22 +2,27 @@
 import useLocalStorage from '@/src/hooks/useLocalStorage';
 import Link from 'next/link';
 import React, { useState } from 'react'
+import styles from './Login.module.scss';
+import Stars from '@/src/component/stars/Stars';
 
 export default function page() {
-  const [input, setinput] = useState("")
-  const [name, setName] = useLocalStorage('name', '');
+	const [input, setinput] = useState("")
+	const [name, setName] = useLocalStorage('name', '');
 
-  
-  return (
-    <div>
-      <h1>Bienvenido!!!</h1>
-      <h4>Ingresa tu nombre</h4>
-      <input type="text" value={input} onChange={(e) => setinput(e.target.value)} />
-      
-      <Link href={"/"}>
-        <button onClick={()=> setName(input)}>Ingresar</button>
-      </Link>
-    </div>
-  )
+
+	return (
+		<main className={styles.container}>
+			<Stars />
+			<section>
+				<div>
+					
+				</div>
+			</section>
+			<section>
+
+			</section>
+
+		</main>
+	)
 }
 
