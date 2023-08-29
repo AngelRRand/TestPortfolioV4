@@ -1,18 +1,23 @@
 import Image from 'next/image'
 import React from 'react'
 import styles from "../component/Selector.module.scss"
-export default function Selector() {
+import { SelectorOption } from '@/src/interface'
+
+const Selector: React.FC<SelectorOption> = ({img, style, text}) => {
     return (
-        <button className={styles.btn}>
+        <button className={`${styles.btn} ${styles[style]}`}>
             <Image
                 width={50}
                 height={50}
                 alt='icon selector'
-                src="/assets/icon/create_character/btnAdn.svg"
+                src={img}
             />
             <div>
-                <span>Raza</span>
+                <span>{text}</span>
             </div>
         </button>
     )
 }
+
+
+export default Selector

@@ -11,6 +11,28 @@ export default function page() {
 	const [input, setinput] = useState("")
 	const [name, setName] = useLocalStorage('name', '');
 
+	let selectores = [
+		{
+			img: "/assets/icon/create_character/btnAdn.svg",
+			style: "top",
+			text: "Raza"
+		},
+		{
+			img: "/assets/icon/create_character/btnDedo.svg",
+			style: "mid",
+			text: "Piel"
+		},
+		{
+			img: "/assets/icon/create_character/btnPelo.svg",
+			style: "bottom",
+			text: "Pelo"
+		},
+		{
+			img: "/assets/icon/create_character/btnTraje.svg",
+			style: "footer",
+			text: "Traje"
+		},
+	]
 
 	return (
 		<main className={styles.container}>
@@ -23,19 +45,29 @@ export default function page() {
 						alt='circule'
 						src="/assets/Circulo.svg"
 					/>
-					<Selector/>
+					{
+						selectores.map(s => {
+							return (
+								<Selector
+									img={s.img}
+									style={s.style}
+									text={s.text}
+								/>
+							)
+						})
+					}
 				</div>
 				<div>
-					{/* 
+
 					<Image
-						width={100}
-						height={100}
+						width={265}
+						height={265}
 						alt='Estrellas'
-						src="/assets/Stars.gif"
-						className={styles.stars}
+						src="/assets/referen/Base.svg"
+						className={styles.perfil}
 						priority={true}
-					/> 
-					*/}
+					/>
+
 				</div>
 			</section>
 			<section>
