@@ -10,7 +10,7 @@ import Selector from './component/Selector';
 export default function page() {
 	const [input, setinput] = useState("")
 	const [name, setName] = useLocalStorage('name', '');
-
+	const [showGender, setShowGender] = useState(1)
 	let selectores = [
 		{
 			img: "/assets/icon/create_character/btnAdn.svg",
@@ -18,9 +18,9 @@ export default function page() {
 			text: "Raza"
 		},
 		{
-			img: "/assets/icon/create_character/btnDedo.svg",
+			img: "/assets/icon/create_character/btnGesto.svg",
 			style: "mid",
-			text: "Piel"
+			text: "Gesto"
 		},
 		{
 			img: "/assets/icon/create_character/btnPelo.svg",
@@ -39,12 +39,14 @@ export default function page() {
 			<Stars />
 			<section>
 				<div>
+
 					<Image
 						width={500}
 						height={500}
 						alt='circule'
 						src="/assets/Circulo.svg"
 					/>
+					
 					{
 						selectores.map(s => {
 							return (
@@ -52,6 +54,7 @@ export default function page() {
 									img={s.img}
 									style={s.style}
 									text={s.text}
+									
 								/>
 							)
 						})
@@ -67,7 +70,22 @@ export default function page() {
 						className={styles.perfil}
 						priority={true}
 					/>
-
+					<div className={styles.options}>
+						<Image
+							width={50}
+							height={50}
+							alt='circule'
+							src="/assets/icon/create_character/hombre.svg"
+							style={{opacity: showGender}}
+						/>
+						<Image
+							width={50}
+							height={50}
+							alt='circule'
+							src="/assets/icon/create_character/mujer.svg"
+							style={{opacity: showGender}}
+						/>
+					</div>
 				</div>
 			</section>
 			<section>
