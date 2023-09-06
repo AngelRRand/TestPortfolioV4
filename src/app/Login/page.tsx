@@ -86,7 +86,7 @@ export default function page() {
 			<section>
 
 			</section>
-
+			<input placeholder='nombre' className={styles.input}/>
 		</main>
 	)
 }

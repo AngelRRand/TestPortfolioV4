@@ -24,7 +24,7 @@ const Selector: React.FC<SelectorOption> = ({ img, style, text, isSelected, onSe
                 width={50}
                 height={50}
                 alt='circule'
-                src="/assets/arrow.svg"
+                src="/assets/arrow.gif"
                 style={{ opacity: isSelected ? 1 : 0 }}
             />
             <audio ref={audioRef} src="/assets/sounds/btn.mp3" preload="auto" />
