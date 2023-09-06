@@ -4,6 +4,7 @@
     height: 100vh;
     background-color: rgb(9, 10, 19);
     position: relative;
+
     section {
         &:first-of-type {
             display: flex;
@@ -21,7 +22,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    
+
                     >img {
                         width: 40vw;
                         height: 40vw;
@@ -40,12 +41,35 @@
 
         &:nth-of-type(2) {
             width: 50%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            h1 {
+                color: white;
+                margin-top: 10vh;
+                font-size: 3rem;
+            }
+
+            div {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                grid-column-gap: 2.5vw;
+                grid-row-gap: 2vh;
+                
+
+                article{
+                    background: crimson;
+                    border: 1px solid white;
+                }
+            }
         }
     }
 }
 
 
-.options{
+.options {
     z-index: 1000000;
     display: flex;
     justify-content: center;
@@ -55,7 +79,7 @@
     margin-top: 10px;
 }
 
-.input{
+.input {
     color: white;
     position: absolute;
     left: 25vw;
