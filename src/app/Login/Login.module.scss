@@ -23,8 +23,8 @@
                     align-items: center;
                     
                     >img {
-                        width: 45vw;
-                        height: 45vw;
+                        width: 40vw;
+                        height: 40vw;
                         position: absolute;
                     }
                 }
@@ -33,6 +33,7 @@
                     border: 5px solid white;
                     width: 20vw;
                     height: 20vw;
+                    background: white;
                 }
             }
         }
@@ -44,17 +45,12 @@
 }
 
 
-.perfil{
-    width: 100%;
-    z-index: 100000000000;
-}
-
 .options{
-    top: 70vh;
     z-index: 1000000;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 3px;
     transition: all 0.5s ease;
+    margin-top: 10px;
 }

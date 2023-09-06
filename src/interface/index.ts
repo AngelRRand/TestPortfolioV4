@@ -6,5 +6,7 @@ export interface IUseLocalStorage {
 export interface SelectorOption {
   img: string,
   style: string,
-  text: string
+  text: string,
+  isSelected: boolean,
+  onSelect: () => void
 }

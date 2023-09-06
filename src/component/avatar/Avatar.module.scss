@@ -1,0 +1,11 @@
+.container {
+    position: relative;
+    z-index: 100000000000;
+    height: 100%;
+
+    img {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+    }
+}

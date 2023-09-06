@@ -1,25 +1,52 @@
-.btn{
+.btn {
     position: absolute;
-    right: -50px;
+    right: -2.4vw;
     display: flex;
     align-items: center;
-    width: 150px;
-    z-index: 10000;
+    width: 10vw;
+    height: 7vh;
+    padding: 0;
+    background-image: url("/assets/icon/create_character/btnFondo.svg");
+    background-size: cover;
+background-position: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
     span {
         text-align: center;
         font-size: 1.5rem;
     }
+
+    img {
+        &:nth-of-type(1) {
+            z-index: 100;
+        }
+
+        &:nth-of-type(2) {
+            z-index: 1;
+            position: absolute;
+            right: -5vw;
+            transition: 0.1s all ease;
+
+        }
+    }
 }
 
-.top{
-    top: 30vh;
+
+.top {
+    right: -0.5vw;
+    top: 28vh;
 }
-.mid{
+
+.mid {
     top: 40vh;
 }
-.bottom{
-    top: 50vh;
+
+.bottom {
+    top: 53vh;
 }
-.footer{
-    top: 60vh;
+
+.footer {
+    right: -0.5vw;
+    top: 65vh;
 }

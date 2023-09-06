@@ -6,11 +6,14 @@ import styles from './Login.module.scss';
 import Stars from '@/src/component/stars/Stars';
 import Image from 'next/image';
 import Selector from './component/Selector';
+import Avatar from '@/src/component/avatar/Avatar';
 
 export default function page() {
 	const [input, setinput] = useState("")
 	const [name, setName] = useLocalStorage('name', '');
-	const [showGender, setShowGender] = useState(1)
+	const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
+
+
 	let selectores = [
 		{
 			img: "/assets/icon/create_character/btnAdn.svg",
@@ -18,19 +21,19 @@ export default function page() {
 			text: "Raza"
 		},
 		{
-			img: "/assets/icon/create_character/btnGesto.svg",
-			style: "mid",
-			text: "Gesto"
-		},
-		{
 			img: "/assets/icon/create_character/btnPelo.svg",
-			style: "bottom",
+			style: "mid",
 			text: "Pelo"
 		},
 		{
 			img: "/assets/icon/create_character/btnTraje.svg",
-			style: "footer",
+			style: "bottom",
 			text: "Traje"
+		},
+		{
+			img: "/assets/icon/create_character/btnColors.svg",
+			style: "footer",
+			text: "Color"
 		},
 	]
 
@@ -41,49 +44,41 @@ export default function page() {
 				<div>
 
 					<Image
-						width={500}
-						height={500}
+						width={450}
+						height={450}
 						alt='circule'
 						src="/assets/Circulo.svg"
 					/>
-					
+
 					{
-						selectores.map(s => {
-							return (
-								<Selector
-									img={s.img}
-									style={s.style}
-									text={s.text}
-									
-								/>
-							)
-						})
+						selectores.map((s, i) => (
+							<Selector
+								img={s.img}
+								style={s.style}
+								text={s.text}
+								key={i}
+								isSelected={i === selectedButtonIndex}
+								onSelect={() => setSelectedButtonIndex(i)}
+							/>
+						))
 					}
 				</div>
 				<div>
 
-					<Image
-						width={265}
-						height={265}
-						alt='Estrellas'
-						src="/assets/referen/Base.svg"
-						className={styles.perfil}
-						priority={true}
-					/>
+					<Avatar />
+
 					<div className={styles.options}>
 						<Image
 							width={50}
 							height={50}
 							alt='circule'
 							src="/assets/icon/create_character/hombre.svg"
-							style={{opacity: showGender}}
 						/>
 						<Image
 							width={50}
 							height={50}
 							alt='circule'
 							src="/assets/icon/create_character/mujer.svg"
-							style={{opacity: showGender}}
 						/>
 					</div>
 				</div>
