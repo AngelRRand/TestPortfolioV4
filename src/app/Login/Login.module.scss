@@ -57,11 +57,25 @@
                 grid-template-rows: repeat(3, 1fr);
                 grid-column-gap: 2.5vw;
                 grid-row-gap: 2vh;
-                
 
-                article{
-                    background: crimson;
-                    border: 1px solid white;
+
+                article {
+                    h4 {
+                        color: white;
+                        margin-top: 1vh;
+                        font-size: 1rem;
+                        text-align: center;
+                    }
+
+                    div {
+                        border: 1px solid white;
+                        background: white;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 10vw;
+                        height: 10vw;
+                    }
                 }
             }
         }

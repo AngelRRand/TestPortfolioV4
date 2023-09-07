@@ -9,15 +9,46 @@ import Selector from './component/Selector';
 import Avatar from '@/src/component/avatar/Avatar';
 import data from "../../../public/assets/create_character/data.json"
 
+let selectores = [
+	{
+		img: "/assets/icon/create_character/btnAdn.svg",
+		style: "top",
+		text: "Raza",
+		id: "base"
+	},
+	{
+		img: "/assets/icon/create_character/btnPelo.svg",
+		style: "mid",
+		text: "Pelo",
+		id: "hair"
+	},
+	{
+		img: "/assets/icon/create_character/btnTraje.svg",
+		style: "bottom",
+		text: "Traje",
+		id: "suit"
+	},
+	{
+		img: "/assets/icon/create_character/btnColors.svg",
+		style: "footer",
+		text: "Color",
+		id: "color"
+	},
+]
 
 export default function page() {
+	/* App State */
 	const [input, setinput] = useState("")
 	const [name, setName] = useLocalStorage('name', '');
 	const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
-	const [options, setOptions] = useState([])
 	const audioRef = useRef<HTMLAudioElement | null>(null);
 
-	let newdata = data[0].gender.female
+	/* Character state */
+	const [genderType, setGenderType] = useState(1)
+	const [base, setBase] = useState(0)
+	const [hair, setHair] = useState(0)
+	const [suit, setsuit] = useState(0)
+	const [colors, setcolors] = useState(0)
 
 
 	const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -30,37 +61,9 @@ export default function page() {
 		setinput(inputValue)
 	};
 
-	let selectores = [
-		{
-			img: "/assets/icon/create_character/btnAdn.svg",
-			style: "top",
-			text: "Raza",
-			id: "base"
-		},
-		{
-			img: "/assets/icon/create_character/btnPelo.svg",
-			style: "mid",
-			text: "Pelo",
-			id: "hair"
-		},
-		{
-			img: "/assets/icon/create_character/btnTraje.svg",
-			style: "bottom",
-			text: "Traje",
-			id: "suit"
-		},
-		{
-			img: "/assets/icon/create_character/btnColors.svg",
-			style: "footer",
-			text: "Color",
-			id: "color"
-		},
-	]
-/* 
-	useEffect(() => {
-		setOptions(newdata)
-	}, [selectedButtonIndex])
-	 */
+	
+
+
 
 	return (
 		<main className={styles.container}>
@@ -90,7 +93,13 @@ export default function page() {
 				</div>
 				<div>
 
-					<Avatar />
+					<Avatar
+						gender={genderType}
+						base={base}
+						hair={hair}
+						suit={suit}
+						color={colors}
+					/>
 
 					<div className={styles.options}>
 						<Image
@@ -112,9 +121,22 @@ export default function page() {
 				<h1>{selectores[selectedButtonIndex].text}</h1>
 				<div>
 					{
-						options?.map((o, i) => {
-							return(
-								<article></article>
+						data.map((o, i) => {
+							return (
+								<>
+
+									<article>
+										<Avatar 
+											gender={genderType}
+											base={i}
+											hair={hair}
+											suit={suit}
+											color={colors}
+										/> 
+
+										<h4>{o.name}</h4>
+									</article>
+								</>
 							)
 						})
 					}

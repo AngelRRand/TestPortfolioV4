@@ -10,3 +10,12 @@ export interface SelectorOption {
   isSelected: boolean,
   onSelect: () => void
 }
+
+export interface AvatarConfig {
+  gender: any,
+  base: number,
+  hair: number,
+  suit: number,
+  color: number
+}
+
