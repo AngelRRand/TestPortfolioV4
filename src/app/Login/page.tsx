@@ -37,12 +37,14 @@ let selectores = [
 ]
 
 export default function page() {
+
 	/* App State */
 	const [input, setinput] = useState("")
 	const [name, setName] = useLocalStorage('name', '');
 	const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
 	const audioRef = useRef<HTMLAudioElement | null>(null);
 	const audioRefSelect = useRef<HTMLAudioElement | null>(null);
+	const [btnPress, setBtnPress] = useState("url(/assets/icon/create_character/btnFondoR.svg)")
 
 	/* Character state */
 	const [genderType, setGenderType] = useState(1)
@@ -67,7 +69,7 @@ export default function page() {
 	}
 
 
-
+	console.log(btnPress)
 
 	return (
 		<main className={styles.container}>
@@ -80,6 +82,7 @@ export default function page() {
 						height={450}
 						alt='circule'
 						src="/assets/Circulo.svg"
+						priority
 					/>
 					{
 						selectores.map((s, i) => (
@@ -102,19 +105,33 @@ export default function page() {
 						suit={suit}
 						color={colors}
 					/>
-					<div className={styles.options}>
-						<Image
-							width={50}
-							height={50}
-							alt='circule'
-							src="/assets/icon/create_character/btnMale.svg"
-						/>
-						<Image
-							width={50}
-							height={50}
-							alt='circule'
-							src="/assets/icon/create_character/btnGirl.svg"
-						/>
+					<div
+						className={styles.options}
+						style={{ backgroundImage: btnPress }}
+					>
+						<div onClick={() => {
+							setBtnPress("url(/assets/icon/create_character/btnFondoL.svg)")
+							soundEffect(audioRefSelect)
+						}}>
+							<Image
+								width={50}
+								height={50}
+								alt='circule'
+								src="/assets/icon/create_character/btnMale.svg"
+							/>
+						</div>
+
+						<div onClick={() => {
+							setBtnPress("url(/assets/icon/create_character/btnFondoR.svg)")
+							soundEffect(audioRefSelect)
+						}}>
+							<Image
+								width={50}
+								height={50}
+								alt='circule'
+								src="/assets/icon/create_character/btnGirl.svg"
+							/>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -126,7 +143,7 @@ export default function page() {
 							(
 								data.map((o, i) => {
 									return (
-										<article onClick={() => {
+										<article key={i} onClick={() => {
 											soundEffect(audioRefSelect)
 											setBase(i)
 										}}>
@@ -145,7 +162,7 @@ export default function page() {
 								(
 									data[base].gender[genderType].hair.map((o, i) => {
 										return (
-											<article onClick={() => {
+											<article key={i} onClick={() => {
 												soundEffect(audioRefSelect)
 												setHair(i)
 												setcolors(i)
@@ -157,7 +174,7 @@ export default function page() {
 													suit={suit}
 													color={i}
 												/>
-												<h4 style={{ textShadow: base == i ? "1px 1px 10px white" : "none" }}>{o.name}</h4>
+												<h4 style={{ textShadow: hair == i ? "1px 1px 10px white" : "none" }}>{o.name}</h4>
 											</article>
 										)
 									})
