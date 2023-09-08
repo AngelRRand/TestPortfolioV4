@@ -42,6 +42,7 @@ export default function page() {
 	const [name, setName] = useLocalStorage('name', '');
 	const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
 	const audioRef = useRef<HTMLAudioElement | null>(null);
+	const audioRefSelect = useRef<HTMLAudioElement | null>(null);
 
 	/* Character state */
 	const [genderType, setGenderType] = useState(1)
@@ -53,15 +54,18 @@ export default function page() {
 
 	const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
 		const inputValue = e.target.value;
-		if (audioRef.current) {
-			audioRef.current.currentTime = 0.1;
-			audioRef.current.volume = 1;
-			audioRef.current.play();
-		}
+		soundEffect(audioRef)
 		setinput(inputValue)
 	};
 
-	
+	const soundEffect = (audio: any) => {
+		if (audio.current) {
+			audio.current.currentTime = 0.01;
+			audio.current.volume = 1;
+			audio.current.play();
+		}
+	}
+
 
 
 
@@ -77,7 +81,6 @@ export default function page() {
 						alt='circule'
 						src="/assets/Circulo.svg"
 					/>
-
 					{
 						selectores.map((s, i) => (
 							<Selector
@@ -92,7 +95,6 @@ export default function page() {
 					}
 				</div>
 				<div>
-
 					<Avatar
 						gender={genderType}
 						base={base}
@@ -100,19 +102,18 @@ export default function page() {
 						suit={suit}
 						color={colors}
 					/>
-
 					<div className={styles.options}>
 						<Image
 							width={50}
 							height={50}
 							alt='circule'
-							src="/assets/icon/create_character/hombre.svg"
+							src="/assets/icon/create_character/btnMale.svg"
 						/>
 						<Image
 							width={50}
 							height={50}
 							alt='circule'
-							src="/assets/icon/create_character/mujer.svg"
+							src="/assets/icon/create_character/btnGirl.svg"
 						/>
 					</div>
 				</div>
@@ -121,30 +122,55 @@ export default function page() {
 				<h1>{selectores[selectedButtonIndex].text}</h1>
 				<div>
 					{
-						data.map((o, i) => {
-							return (
-								<>
-
-									<article>
-										<Avatar 
-											gender={genderType}
-											base={i}
-											hair={hair}
-											suit={suit}
-											color={colors}
-										/> 
-
-										<h4>{o.name}</h4>
-									</article>
-								</>
-							)
-						})
+						selectores[selectedButtonIndex].id === "base" ?
+							(
+								data.map((o, i) => {
+									return (
+										<article onClick={() => {
+											soundEffect(audioRefSelect)
+											setBase(i)
+										}}>
+											<Avatar
+												gender={genderType}
+												base={i}
+												hair={hair}
+												suit={suit}
+												color={colors}
+											/>
+											<h4 style={{ textShadow: base == i ? "1px 1px 10px white" : "none" }}>{o.name}</h4>
+										</article>
+									)
+								})
+							) : selectores[selectedButtonIndex].id === "hair" ?
+								(
+									data[base].gender[genderType].hair.map((o, i) => {
+										return (
+											<article onClick={() => {
+												soundEffect(audioRefSelect)
+												setHair(i)
+												setcolors(i)
+											}}>
+												<Avatar
+													gender={genderType}
+													base={base}
+													hair={i}
+													suit={suit}
+													color={i}
+												/>
+												<h4 style={{ textShadow: base == i ? "1px 1px 10px white" : "none" }}>{o.name}</h4>
+											</article>
+										)
+									})
+								) : (
+									<></>
+								)
 					}
 
 				</div>
 			</section>
 			<input placeholder='nombre' onChange={(e) => handleChangeInput(e)} className={styles.input} />
 			<audio ref={audioRef} src="/assets/sounds/input.mp3" preload="auto" />
+			<audio ref={audioRefSelect} src="/assets/sounds/btn.mp3" preload="auto" />
 
 		</main>
 	)
