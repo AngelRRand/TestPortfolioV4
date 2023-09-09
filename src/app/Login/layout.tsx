@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{position:"relative"}} className={inter.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   )
 }

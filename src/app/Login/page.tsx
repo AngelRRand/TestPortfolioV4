@@ -69,7 +69,6 @@ export default function page() {
 	}
 
 
-	console.log(btnPress)
 
 	return (
 		<main className={styles.container}>
@@ -154,7 +153,7 @@ export default function page() {
 												suit={suit}
 												color={colors}
 											/>
-											<h4 style={{ textShadow: base == i ? "1px 1px 10px white" : "none" }}>{o.name}</h4>
+											<h4 className={base === i ? styles.textShadowActive : styles.textShadowInactive}>{o.name}</h4>
 										</article>
 									)
 								})
@@ -174,7 +173,7 @@ export default function page() {
 													suit={suit}
 													color={i}
 												/>
-												<h4 style={{ textShadow: hair == i ? "1px 1px 10px white" : "none" }}>{o.name}</h4>
+												<h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{o.name}</h4>
 											</article>
 										)
 									})

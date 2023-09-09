@@ -84,7 +84,7 @@
 .options {
     display: flex;
     position: absolute;
-    width: 10vw;
+    width: 12vw;
     height: 10vh;
     left: 25vw;
     z-index: 1000000;
@@ -108,4 +108,12 @@
     background-color: transparent;
     border: none;
     border-bottom: 10px solid white;
+}
+
+.textShadowActive {
+    text-shadow: 1px 1px 10px white;
+}
+
+.textShadowInactive {
+    text-shadow: none;
 }
