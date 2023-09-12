@@ -111,6 +111,7 @@ export default function page() {
 						<div onClick={() => {
 							setBtnPress("url(/assets/icon/create_character/btnFondoL.svg)")
 							soundEffect(audioRefSelect)
+							setGenderType(0)
 						}}>
 							<Image
 								width={50}
@@ -123,6 +124,7 @@ export default function page() {
 						<div onClick={() => {
 							setBtnPress("url(/assets/icon/create_character/btnFondoR.svg)")
 							soundEffect(audioRefSelect)
+							setGenderType(1)
 						}}>
 							<Image
 								width={50}
