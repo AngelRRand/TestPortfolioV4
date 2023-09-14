@@ -10,7 +10,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 60%;
+            width: 50%;
             position: relative;
 
             >div {
@@ -39,15 +39,21 @@
         }
 
         &:nth-of-type(2) {
-            width: 40%;
+            width: 50%;
             display: flex;
             align-items: center;
             flex-direction: column;
 
             h1 {
-                color: white;
                 margin-top: 10vh;
-                font-size: 3rem;
+                font-size: 2rem;
+                background-image: url("/assets/icon/create_character/btnFondo.svg");
+                background-size: cover;
+                background-position: center;
+                background-color: transparent;
+                width: 15vw;
+                text-align: center;
+                z-index: 1000;
             }
 
             div {
@@ -116,4 +122,16 @@
 
 .textShadowInactive {
     text-shadow: none;
+}
+
+.color {
+    width: 3.5vw;
+    height: 3.5vw;
+    z-index: 10000;
+    position: relative;
+    img{
+        &:nth-of-type(2) {
+            position: absolute;
+        }
+    }
 }

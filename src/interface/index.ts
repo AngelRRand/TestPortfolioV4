@@ -16,6 +16,20 @@ export interface AvatarConfig {
   base: number,
   hair: number,
   suit: number,
-  color: number
+  color: number,
+  colorPrincipal: string,
+  colorSecond: string,
+
 }
 
+export interface LooksColor{
+  color: string,
+  secondColor: string
+}
+
+export interface LooksColorSelector{
+  color: string,
+  secondColor: string
+  position: number
+  gender: number
+}

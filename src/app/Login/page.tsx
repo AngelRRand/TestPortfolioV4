@@ -14,25 +14,25 @@ let selectores = [
 	{
 		img: "/assets/icon/create_character/btnAdn.svg",
 		style: "top",
-		text: "Raza",
+		text: "Races",
 		id: "base"
 	},
 	{
 		img: "/assets/icon/create_character/btnPelo.svg",
 		style: "mid",
-		text: "Pelo",
+		text: "Looks",
 		id: "hair"
 	},
 	{
 		img: "/assets/icon/create_character/btnTraje.svg",
 		style: "bottom",
-		text: "Traje",
+		text: "Styles",
 		id: "suit"
 	},
 	{
 		img: "/assets/icon/create_character/btnColors.svg",
 		style: "footer",
-		text: "Color",
+		text: "Colors",
 		id: "color"
 	},
 ]
@@ -53,6 +53,7 @@ export default function page() {
 	const [hair, setHair] = useState(0)
 	const [suit, setsuit] = useState(0)
 	const [colors, setcolors] = useState(0)
+	const [selectColors, setselectColors] = useState(5)
 
 
 	const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
@@ -68,7 +69,6 @@ export default function page() {
 			audio.current.play();
 		}
 	}
-
 
 
 	return (
@@ -104,6 +104,8 @@ export default function page() {
 						hair={hair}
 						suit={suit}
 						color={colors}
+						colorPrincipal={colorsJson[selectColors].rgb}
+						colorSecond={colorsJson[selectColors].rgb2}
 					/>
 					<div
 						className={styles.options}
@@ -138,7 +140,7 @@ export default function page() {
 				</div>
 			</section>
 			<section>
-				<h1>{selectores[selectedButtonIndex].text}</h1>
+				<h1 className={styles.title}>{selectores[selectedButtonIndex].text}</h1>
 				<div>
 					{
 						selectores[selectedButtonIndex].id === "base" ?
@@ -155,6 +157,8 @@ export default function page() {
 												hair={hair}
 												suit={suit}
 												color={colors}
+												colorPrincipal={colorsJson[selectColors].rgb}
+												colorSecond={colorsJson[selectColors].rgb2}
 											/>
 											<h4 className={base === i ? styles.textShadowActive : styles.textShadowInactive}>{o.name}</h4>
 										</article>
@@ -175,6 +179,8 @@ export default function page() {
 													hair={i}
 													suit={suit}
 													color={i}
+													colorPrincipal={colorsJson[selectColors].rgb}
+													colorSecond={colorsJson[selectColors].rgb2}
 												/>
 												<h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{o.name}</h4>
 											</article>
@@ -193,6 +199,8 @@ export default function page() {
 													hair={hair}
 													suit={i}
 													color={colors}
+													colorPrincipal={colorsJson[selectColors].rgb}
+													colorSecond={colorsJson[selectColors].rgb2}
 												/>
 												<h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{o.name}</h4>
 											</article>
@@ -201,12 +209,32 @@ export default function page() {
 								) : (
 									colorsJson.map((c, i) => {
 										return (
-											<Image
-												width={50}
-												height={50}
-												alt='icon selector'
-												src={c.img}
-											/>
+											<div
+												className={styles.color}
+												onClick={() => {
+													soundEffect(audioRefSelect)
+													setselectColors(i)
+												}}
+											>
+												<Image
+													width={50}
+													height={50}
+													alt='icon selector'
+													src={c.img}
+												/>
+												{
+													selectColors === i ? (
+														<Image
+															width={50}
+															height={50}
+															alt='icon selector'
+															src={"/assets/create_character/svg/colors/active.svg"}
+														/>
+													) : (
+														<></>
+													)
+												}
+											</div>
 										)
 									})
 								)
@@ -215,7 +243,7 @@ export default function page() {
 
 				</div>
 			</section>
-			<input placeholder='nombre' onChange={(e) => handleChangeInput(e)} className={styles.input} />
+			{/* <input placeholder='nombre' onChange={(e) => handleChangeInput(e)} className={styles.input} /> */}
 			<audio ref={audioRef} src="/assets/sounds/input.mp3" preload="auto" />
 			<audio ref={audioRefSelect} src="/assets/sounds/btn.mp3" preload="auto" />
 

@@ -3,8 +3,9 @@ import styles from './Avatar.module.scss';
 import Image from 'next/image';
 import data from "../../../public/assets/create_character/data.json"
 import { AvatarConfig } from '@/src/interface';
-const Avatar: React.FC<AvatarConfig> = ({gender ,base ,hair, suit, color}) => {
-
+import Degraded from './hair/human/female/DegradedF';
+import HumanColors from './hair/human/HumanColors';
+const Avatar: React.FC<AvatarConfig> = ({gender ,base ,hair, suit, color, colorPrincipal, colorSecond}) => {
 	let raza = data[base]
 	if (raza.name === "Human") {
 		let newdata = raza.gender[gender]
@@ -25,13 +26,11 @@ const Avatar: React.FC<AvatarConfig> = ({gender ,base ,hair, suit, color}) => {
 					src={newdata.hair[hair].img}
 					priority={true}
 				/>
-				
-				<Image
-					width={265}
-					height={265}
-					alt='color'
-					src={newdata.hair[color].color}
-					priority={true}
+				<HumanColors
+					color={colorPrincipal}
+					secondColor={colorSecond}
+					position={color}
+					gender={gender}
 				/>
 				{
 					newdata.suit[suit].img === "" ?
