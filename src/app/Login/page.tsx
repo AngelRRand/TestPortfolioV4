@@ -8,6 +8,7 @@ import Image from 'next/image';
 import Selector from './component/Selector';
 import Avatar from '@/src/component/avatar/Avatar';
 import data from "../../../public/assets/create_character/data.json"
+import colorsJson from "../../../public/assets/create_character/colors.json"
 
 let selectores = [
 	{
@@ -197,8 +198,18 @@ export default function page() {
 											</article>
 										)
 									})
-								) :
-									<></>
+								) : (
+									colorsJson.map((c, i) => {
+										return (
+											<Image
+												width={50}
+												height={50}
+												alt='icon selector'
+												src={c.img}
+											/>
+										)
+									})
+								)
 
 					}
 
