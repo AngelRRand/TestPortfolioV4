@@ -25,6 +25,14 @@ const Avatar: React.FC<AvatarConfig> = ({gender ,base ,hair, suit, color}) => {
 					src={newdata.hair[hair].img}
 					priority={true}
 				/>
+				
+				<Image
+					width={265}
+					height={265}
+					alt='color'
+					src={newdata.hair[color].color}
+					priority={true}
+				/>
 				{
 					newdata.suit[suit].img === "" ?
 						<></>
@@ -38,14 +46,6 @@ const Avatar: React.FC<AvatarConfig> = ({gender ,base ,hair, suit, color}) => {
 							priority={true}
 						/>
 				}
-				<Image
-					width={265}
-					height={265}
-					alt='color'
-					src={newdata.hair[color].color}
-					priority={true}
-				/>
-
 			</div>
 		)
 	} else {

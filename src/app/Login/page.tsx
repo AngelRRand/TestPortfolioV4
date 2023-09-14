@@ -179,9 +179,27 @@ export default function page() {
 											</article>
 										)
 									})
-								) : (
+								) : selectores[selectedButtonIndex].id === "suit" ? (
+									data[base].gender[genderType].suit.map((o, i) => {
+										return (
+											<article key={i} onClick={() => {
+												soundEffect(audioRefSelect)
+												setsuit(i)
+											}}>
+												<Avatar
+													gender={genderType}
+													base={base}
+													hair={hair}
+													suit={i}
+													color={colors}
+												/>
+												<h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{o.name}</h4>
+											</article>
+										)
+									})
+								) :
 									<></>
-								)
+
 					}
 
 				</div>
