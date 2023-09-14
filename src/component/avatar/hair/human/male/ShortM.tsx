@@ -4,7 +4,7 @@ import { LooksColor } from '@/src/interface';
 
 const ShortM: React.FC<LooksColor> = ({ color, secondColor }) => {
     return (
-        <svg version="1.1" viewBox='0 0 41 41' className={styles.colores} fill="currentColor" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+        <svg version="1.1" viewBox='0 0 41 41' className={styles.colores} fill="currentColor" xmlns="http://www.w3.org/2000/svg" shapeRendering="crispEdges">
             <rect x="2" y="0" width="1" height="1" fill={color} />
             <rect x="3" y="0" width="1" height="1" fill={color} />
             <rect x="4" y="0" width="1" height="1" fill={color} />
