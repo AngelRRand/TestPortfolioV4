@@ -35,11 +35,11 @@ const HumanColors: React.FC<LooksColorSelector> = ({ color, secondColor, positio
         }
     } else {
         colorsMap = {
-            0: <ShortM
+            0: <DegradedM
                 color={color}
                 secondColor={secondColor}
             />,
-            1: <DegradedM
+            1: <ShortM
                 color={color}
                 secondColor={secondColor}
             />,

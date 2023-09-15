@@ -1,18 +1,16 @@
 .btn {
-    position: absolute;
-    right: -2.4vw;
     display: flex;
     align-items: center;
-    width: 10vw;
-    height: 7vh;
+    position: absolute;
     padding: 0;
     background-image: url("/assets/icon/create_character/btnFondo.svg");
     background-size: cover;
     background-position: center;
     background-color: transparent;
     border: none;
-    padding: 0;
-
+    right: -2.4vw;
+    width: 10vw;
+    
     span {
         text-align: center;
         font-size: 1.5rem;
@@ -28,7 +26,6 @@
             position: absolute;
             right: -5vw;
             transition: 0.1s all ease;
-
         }
     }
 }
@@ -36,18 +33,18 @@
 
 .top {
     right: -0.5vw;
-    top: 28vh;
+    top: 20%;
 }
 
 .mid {
-    top: 40vh;
+    top: 37%;
 }
 
 .bottom {
-    top: 53vh;
+    top: 54%;
 }
 
 .footer {
     right: -0.5vw;
-    top: 65vh;
+    top: 70%;
 }

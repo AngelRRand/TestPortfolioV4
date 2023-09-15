@@ -41,3 +41,12 @@ img {
   -moz-user-drag: none;
   -ms-user-drag: none;
 }
+
+input {
+  border: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  background-color: transparent;
+
+}
