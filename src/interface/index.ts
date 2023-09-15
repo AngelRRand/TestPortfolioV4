@@ -53,7 +53,9 @@ export interface editCharacter {
 
 export interface editNacionality {
 	flag: string
-	setFlag: (value: string) => void
 	input: string
+	audioRefSelect: MutableRefObject<HTMLAudioElement | null>;
+	setFlag: (value: string) => void
+	soundEffect: (audio: any) => void;
 	handleChangeInput: (audio: any) => void;
 }

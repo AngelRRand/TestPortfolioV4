@@ -37,14 +37,14 @@ let selectores = [
 export default function page() {
 
 	/* App State */
-	const [section, setsection] = useState("navionality")
+	const [section, setsection] = useState("identity")
 	const [input, setinput] = useState("")
 	const [name, setName] = useLocalStorage('name', '');
 	const audioRef = useRef<HTMLAudioElement | null>(null);
 	const audioRefSelect = useRef<HTMLAudioElement | null>(null);
 
 	/* Character state */
-	const [flag, setFlag] = useState("/assets/nacionality/argentina.gif")
+	const [flag, setFlag] = useState("/assets/nacionality/usa.gif")
 	const [genderType, setGenderType] = useState(1)
 	const [base, setBase] = useState(0)
 	const [hair, setHair] = useState(0)
@@ -74,8 +74,8 @@ export default function page() {
 			<section className={styles.navegation}>
 				<h1 onClick={() => {
 					soundEffect(audioRefSelect)
-					setsection("navionality")
-				}}>Nationality</h1>
+					setsection("identity")
+				}}>Identity</h1>
 				<h1 onClick={() => {
 					soundEffect(audioRefSelect)
 					setsection("edit")
@@ -88,11 +88,13 @@ export default function page() {
 
 			<div className={styles.containerMain}>
 				{
-					section === "navionality" ? (
+					section === "identity" ? (
 						<EditNacionality
 							flag={flag}
 							setFlag={setFlag}
 							handleChangeInput={handleChangeInput}
+							audioRefSelect={audioRefSelect}
+							soundEffect={soundEffect}
 							input={input}
 						/>
 					) : section === "edit" ? (
