@@ -4,8 +4,10 @@ import React, { useRef, useState, ChangeEvent, useEffect } from 'react'
 import styles from './Login.module.scss';
 import Stars from '@/src/component/stars/Stars';
 import EditCharacter from './component/EditCharacter';
-import Arrows from '@/src/component/decorations/Arrows';
 import EditNacionality from './component/EditNacionality';
+
+import language from "../../../public/assets/language.json"
+
 
 let selectores = [
 	{
@@ -45,6 +47,7 @@ export default function page() {
 
 	/* Character state */
 	const [flag, setFlag] = useState("/assets/nacionality/usa.gif")
+	const [nacionality, setNacionality] = useState(0)
 	const [genderType, setGenderType] = useState(1)
 	const [base, setBase] = useState(0)
 	const [hair, setHair] = useState(0)
@@ -75,15 +78,18 @@ export default function page() {
 				<h1 onClick={() => {
 					soundEffect(audioRefSelect)
 					setsection("identity")
-				}}>Identity</h1>
+				}}>{language[nacionality].login.base.nationality}
+				</h1>
 				<h1 onClick={() => {
 					soundEffect(audioRefSelect)
 					setsection("edit")
-				}}>Edit</h1>
+				}}>{language[nacionality].login.base.edit}
+				</h1>
 				<h1 onClick={() => {
 					soundEffect(audioRefSelect)
 					setsection("name")
-				}}>Name</h1>
+				}}>{language[nacionality].login.base.resume}
+				</h1>
 			</section>
 
 			<div className={styles.containerMain}>
@@ -96,6 +102,9 @@ export default function page() {
 							audioRefSelect={audioRefSelect}
 							soundEffect={soundEffect}
 							input={input}
+							nacionality={nacionality}
+							setNacionality={setNacionality}
+							lenguage={language[nacionality].login.nationality}
 						/>
 					) : section === "edit" ? (
 						<EditCharacter
