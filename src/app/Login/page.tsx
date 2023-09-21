@@ -9,32 +9,6 @@ import EditNacionality from './component/EditNacionality';
 import language from "../../../public/assets/language.json"
 
 
-let selectores = [
-	{
-		img: "/assets/icon/create_character/btnAdn.svg",
-		style: "top",
-		text: "Races",
-		id: "base"
-	},
-	{
-		img: "/assets/icon/create_character/btnPelo.svg",
-		style: "mid",
-		text: "Looks",
-		id: "hair"
-	},
-	{
-		img: "/assets/icon/create_character/btnTraje.svg",
-		style: "bottom",
-		text: "Styles",
-		id: "suit"
-	},
-	{
-		img: "/assets/icon/create_character/btnColors.svg",
-		style: "footer",
-		text: "Colors",
-		id: "color"
-	},
-]
 
 export default function page() {
 
@@ -65,8 +39,8 @@ export default function page() {
 
 	const soundEffect = (audio: any) => {
 		if (audio.current) {
-			audio.current.currentTime = 0.01;
-			audio.current.volume = 0.4;
+			audio.current.currentTime = 0.1;
+			audio.current.volume = 0.2;
 			audio.current.play();
 		}
 	}
@@ -122,6 +96,7 @@ export default function page() {
 							setcolors={setcolors}
 							setsuit={setsuit}
 							setselectColors={setselectColors}
+							lenguage={language[nacionality].login.edit}
 						/>
 					) : (
 						<></>

@@ -1,9 +1,9 @@
-
 .container {
     display: flex;
     width: 100vw;
     height: 85vh;
     margin-bottom: 5vh;
+
     section {
 
         &:nth-of-type(1) {
@@ -23,11 +23,20 @@
                     position: absolute;
                 }
             }
+
             p {
-                color: white;
+                background-image: url("/assets/icon/create_character/btnFondo.svg");
+                background-size: cover;
+                background-position: center;
+                background-color: transparent;
+                z-index: 1000;
+                color: rgb(0, 0, 0);
                 position: absolute;
                 bottom: -5vh;
                 font-size: 2rem;
+                width: 25vw;
+                height: 8vh;
+                text-align: center;
             }
         }
 
@@ -40,6 +49,7 @@
             flex-direction: column;
             z-index: 100;
             color: white;
+
             article {
                 width: 25vw;
                 height: 75vh;
@@ -48,19 +58,22 @@
                 padding: 10px;
                 text-align: center;
                 position: relative;
+
                 .select {
                     position: absolute;
                     left: -5vw;
                     top: 0vh;
                     background-color: green;
+
                     img {
                         position: absolute;
                     }
 
-                    .flag{
+                    .flag {
                         width: 45px;
                         height: 45px;
                         position: absolute;
+
                         img {
                             position: absolute;
                             bottom: 0;
@@ -70,6 +83,7 @@
 
                 }
             }
+
             input {
                 width: 25vw;
                 font-size: 2rem;

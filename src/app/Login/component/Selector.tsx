@@ -8,6 +8,8 @@ const Selector: React.FC<SelectorOption> = ({ img, style, text, isSelected, onSe
     const handleButtonClick = () => {
         if (audioRef.current) {
             audioRef.current.play();
+            audioRef.current.volume = 0.2;
+
         }
         onSelect()
     };

@@ -11,30 +11,30 @@ let selectores = [
 	{
 		img: "/assets/icon/create_character/btnAdn.svg",
 		style: "top",
-		text: "Races",
+		text: "races",
 		id: "base"
 	},
 	{
 		img: "/assets/icon/create_character/btnPelo.svg",
 		style: "mid",
-		text: "Looks",
+		text: "looks",
 		id: "hair"
 	},
 	{
 		img: "/assets/icon/create_character/btnTraje.svg",
 		style: "bottom",
-		text: "Styles",
+		text: "styles",
 		id: "suit"
 	},
 	{
 		img: "/assets/icon/create_character/btnColors.svg",
 		style: "footer",
-		text: "Colors",
+		text: "colors",
 		id: "color"
 	},
 ]
 
-const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, colors, selectColors, audioRefSelect, setGenderType, soundEffect, setBase, setHair, setcolors, setsuit, setselectColors }) => {
+const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, colors, selectColors, audioRefSelect, setGenderType, soundEffect, setBase, setHair, setcolors, setsuit, setselectColors, lenguage }) => {
 	
 	const [btnPress, setBtnPress] = useState("url(/assets/icon/create_character/btnFondoR.svg)")
 	const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
@@ -55,7 +55,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 							<Selector
 								img={s.img}
 								style={s.style}
-								text={s.text}
+								text={lenguage.selectors[i]}
 								key={i}
 								isSelected={i === selectedButtonIndex}
 								onSelect={() => setSelectedButtonIndex(i)}
@@ -106,7 +106,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 				</div>
 			</section>
 			<section>
-				<h1 className={styles.title}>{selectores[selectedButtonIndex].text}</h1>
+				<h1 className={styles.title}>{lenguage.selectors[selectedButtonIndex]}</h1>
 				<div>
 					{
 						selectores[selectedButtonIndex].id === "base" ?
@@ -126,7 +126,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 												colorPrincipal={colorsJson[selectColors].rgb}
 												colorSecond={colorsJson[selectColors].rgb2}
 											/>
-											<h4 className={base === i ? styles.textShadowActive : styles.textShadowInactive}>{o.name}</h4>
+											<h4 className={base === i ? styles.textShadowActive : styles.textShadowInactive}>{lenguage.races[genderType][i]}</h4>
 										</article>
 									)
 								})

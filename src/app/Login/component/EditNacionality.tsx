@@ -1,10 +1,15 @@
 import Image from 'next/image'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styles from './EditNacionality.module.scss';
 import { editNacionality } from '@/src/interface';
 
 const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChangeInput, input, soundEffect, audioRefSelect, nacionality, setNacionality, lenguage }) => {
 
+	const audioRef = useRef<HTMLAudioElement | null>(null);
+
+	useEffect(() => {
+		soundEffectHimnos(audioRef);
+	}, [nacionality]);
 
 	let flags = {
 		"flag": [
@@ -22,7 +27,13 @@ const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChang
 		]
 	}
 
-
+	const soundEffectHimnos = (audio: any) => {
+		if (audio.current) {
+			audio.current.currentTime = 0.1;
+			audio.current.volume = 0.1;
+			audio.current.play();
+		}
+	}
 
 	return (
 		<div className={styles.container}>
@@ -42,7 +53,7 @@ const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChang
 					priority
 					className={styles.flag}
 				/>
-				<p>{lenguage.name}</p>
+				<p className={styles.name}>{lenguage.name}</p>
 			</section>
 			<section>
 				<article>
@@ -61,11 +72,12 @@ const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChang
 									<div
 										className={styles.flag}
 										onClick={() => {
+											soundEffect(audioRefSelect)
 											setFlag(flags.nacionality[i])
 											setNacionality(i)
-											soundEffect(audioRefSelect)
 										}}
 										style={{ marginTop: i * 50 }}
+										key={i}
 									>
 
 										<Image
@@ -74,7 +86,6 @@ const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChang
 											alt='flag'
 											src={f}
 											priority
-											key={i}
 										/>
 										{
 											nacionality === i ? (
@@ -102,6 +113,7 @@ const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChang
 				</article>
 
 			</section>
+			<audio ref={audioRef} src={lenguage.himno} preload="auto" />
 		</div>
 	)
 }

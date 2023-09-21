@@ -49,6 +49,12 @@ export interface editCharacter {
 	setcolors: (value: number) => void
 	setsuit: (value: number) => void
 	setselectColors: (value: number) => void
+	lenguage: {
+		races: string;
+		looks: string;
+		styles: string;
+		colors: string
+	};
 }
 
 export interface editNacionality {
@@ -64,5 +70,6 @@ export interface editNacionality {
 		name: string;
 		text_presentation: string;
 		frase: string;
+		himno: string
 	};
 }
