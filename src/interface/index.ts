@@ -50,12 +50,14 @@ export interface editCharacter {
 	setsuit: (value: number) => void
 	setselectColors: (value: number) => void
 	lenguage: {
-		races: string;
-		looks: string;
-		styles: string;
-		colors: string
+		selectors: string[];
+		races: string[][];
+		looks: string[];
+		styles: string[];
 	};
 }
+
+
 
 export interface editNacionality {
 	flag: string
