@@ -148,7 +148,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 													colorPrincipal={colorsJson[selectColors].rgb}
 													colorSecond={colorsJson[selectColors].rgb2}
 												/>
-												<h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{o.name}</h4>
+												<h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{lenguage.looks[i]}</h4>
 											</article>
 										)
 									})
@@ -168,7 +168,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 													colorPrincipal={colorsJson[selectColors].rgb}
 													colorSecond={colorsJson[selectColors].rgb2}
 												/>
-												<h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{o.name}</h4>
+												<h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{lenguage.styles[i]}</h4>
 											</article>
 										)
 									})
