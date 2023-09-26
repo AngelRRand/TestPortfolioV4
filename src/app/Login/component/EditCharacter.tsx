@@ -35,7 +35,7 @@ let selectores = [
 ]
 
 const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, colors, selectColors, audioRefSelect, setGenderType, soundEffect, setBase, setHair, setcolors, setsuit, setselectColors, lenguage }) => {
-	
+
 	const [btnPress, setBtnPress] = useState("url(/assets/icon/create_character/btnFondoR.svg)")
 	const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
 
@@ -59,6 +59,8 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 								key={i}
 								isSelected={i === selectedButtonIndex}
 								onSelect={() => setSelectedButtonIndex(i)}
+								soundEffect={soundEffect}
+								audioRefSelect={audioRefSelect}
 							/>
 						))
 					}
@@ -72,7 +74,10 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 						color={colors}
 						colorPrincipal={colorsJson[selectColors].rgb}
 						colorSecond={colorsJson[selectColors].rgb2}
+						showNacionality={true}
+						flag={lenguage.flag}
 					/>
+
 					<div
 						className={styles.options}
 						style={{ backgroundImage: btnPress }}
@@ -125,6 +130,9 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 												color={colors}
 												colorPrincipal={colorsJson[selectColors].rgb}
 												colorSecond={colorsJson[selectColors].rgb2}
+												showNacionality={false}
+												flag={lenguage.flag}
+
 											/>
 											<h4 className={base === i ? styles.textShadowActive : styles.textShadowInactive}>{lenguage.races[genderType][i]}</h4>
 										</article>
@@ -147,6 +155,9 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 													color={i}
 													colorPrincipal={colorsJson[selectColors].rgb}
 													colorSecond={colorsJson[selectColors].rgb2}
+													showNacionality={false}
+													flag={lenguage.flag}
+
 												/>
 												<h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{lenguage.looks[i]}</h4>
 											</article>
@@ -167,6 +178,9 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 													color={colors}
 													colorPrincipal={colorsJson[selectColors].rgb}
 													colorSecond={colorsJson[selectColors].rgb2}
+													showNacionality={false}
+													flag={lenguage.flag}
+
 												/>
 												<h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{lenguage.styles[i]}</h4>
 											</article>

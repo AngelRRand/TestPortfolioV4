@@ -8,18 +8,21 @@ export interface SelectorOption {
 	style: string,
 	text: string,
 	isSelected: boolean,
+	audioRefSelect: MutableRefObject<HTMLAudioElement | null>;
+	soundEffect: (audio: any) => void;
 	onSelect: () => void
 }
 
 export interface AvatarConfig {
-	gender: any,
+	gender: number,
 	base: number,
 	hair: number,
 	suit: number,
 	color: number,
 	colorPrincipal: string,
 	colorSecond: string,
-
+	showNacionality:boolean
+	flag: string
 }
 
 export interface LooksColor {
@@ -54,24 +57,22 @@ export interface editCharacter {
 		races: string[][];
 		looks: string[];
 		styles: string[];
+		flag:string
 	};
 }
 
 
 
 export interface editNacionality {
-	flag: string
-	input: string
 	nacionality: number
 	audioRefSelect: MutableRefObject<HTMLAudioElement | null>;
-	setFlag: (value: string) => void;
 	setNacionality: (value: number) => void
 	soundEffect: (audio: any) => void;
-	handleChangeInput: (audio: any) => void;
 	lenguage: {
 		name: string;
 		text_presentation: string;
 		frase: string;
-		himno: string
+		himno: string;
+		flag:string;
 	};
 }

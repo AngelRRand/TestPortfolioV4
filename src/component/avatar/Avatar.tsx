@@ -5,7 +5,7 @@ import data from "../../../public/assets/create_character/data.json"
 import { AvatarConfig } from '@/src/interface';
 import Degraded from './hair/human/female/DegradedF';
 import HumanColors from './hair/human/HumanColors';
-const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, colorPrincipal, colorSecond }) => {
+const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, colorPrincipal, colorSecond, showNacionality = false, flag }) => {
 	let raza = data[base]
 	if (raza.name === "Human") {
 		let newdata = raza.gender[gender]
@@ -45,6 +45,20 @@ const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, color
 							priority={true}
 						/>
 				}
+				{
+					showNacionality ? (
+						<Image
+							width={50}
+							height={50}
+							alt='circule'
+							src={flag}
+							className={styles.flag}
+						/>
+					) : (
+						<></>
+					)
+				}
+
 			</div>
 		)
 	} else {

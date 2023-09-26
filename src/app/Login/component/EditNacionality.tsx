@@ -3,29 +3,20 @@ import React, { useEffect, useRef, useState } from 'react'
 import styles from './EditNacionality.module.scss';
 import { editNacionality } from '@/src/interface';
 
-const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChangeInput, input, soundEffect, audioRefSelect, nacionality, setNacionality, lenguage }) => {
+const EditNacionality: React.FC<editNacionality> = ({ soundEffect, audioRefSelect, nacionality, setNacionality, lenguage }) => {
 
 	const audioRef = useRef<HTMLAudioElement | null>(null);
 
 	useEffect(() => {
-		soundEffectHimnos(audioRef);
+		/* soundEffectHimnos(audioRef); */
 	}, [nacionality]);
+	let flags = [
+			"/assets/icon/create_character/btnUsa.svg",
+			"/assets/icon/create_character/btnArgentina.svg",
+			"/assets/icon/create_character/btnBrasil.svg",
+			"/assets/icon/create_character/btnSpain.svg"
+	]
 
-	let flags = {
-		"flag": [
-			"/assets/nacionality/flag4.svg",
-			"/assets/nacionality/flag1.svg",
-			"/assets/nacionality/flag2.svg",
-			"/assets/nacionality/flag3.svg"
-		],
-		"nacionality": [
-			"/assets/nacionality/usa.gif",
-			"/assets/nacionality/argentina.gif",
-			"/assets/nacionality/brasil.gif",
-			"/assets/nacionality/españa.gif"
-
-		]
-	}
 
 	const soundEffectHimnos = (audio: any) => {
 		if (audio.current) {
@@ -49,7 +40,7 @@ const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChang
 					width={450}
 					height={450}
 					alt='circule'
-					src={flag}
+					src={lenguage.flag}
 					priority
 					className={styles.flag}
 				/>
@@ -67,13 +58,12 @@ const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChang
 							priority
 						/>
 						{
-							flags.flag.map((f, i) => {
+							flags.map((f, i) => {
 								return (
 									<div
 										className={styles.flag}
 										onClick={() => {
 											soundEffect(audioRefSelect)
-											setFlag(flags.nacionality[i])
 											setNacionality(i)
 										}}
 										style={{ marginTop: i * 50 }}
@@ -94,7 +84,7 @@ const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChang
 													width={45}
 													height={45}
 													alt='circule'
-													src={"/assets/nacionality/flagActive.svg"}
+													src={"/assets/icon/create_character/btnFlagActive.svg"}
 													priority
 													key={i}
 												/>
@@ -105,7 +95,7 @@ const EditNacionality: React.FC<editNacionality> = ({ flag, setFlag, handleChang
 									</div>
 								)
 							})
-						}
+						} 
 
 					</div>
 					<p>{lenguage.text_presentation}</p>

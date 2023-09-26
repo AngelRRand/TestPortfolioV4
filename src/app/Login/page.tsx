@@ -6,7 +6,7 @@ import Stars from '@/src/component/stars/Stars';
 import EditCharacter from './component/EditCharacter';
 import EditNacionality from './component/EditNacionality';
 
-import language from "../../../public/assets/language.json"
+import language from "../../../public/assets/create_character/language.json"
 
 
 
@@ -20,7 +20,6 @@ export default function page() {
 	const audioRefSelect = useRef<HTMLAudioElement | null>(null);
 
 	/* Character state */
-	const [flag, setFlag] = useState("/assets/nacionality/usa.gif")
 	const [nacionality, setNacionality] = useState(0)
 	const [genderType, setGenderType] = useState(1)
 	const [base, setBase] = useState(0)
@@ -45,6 +44,8 @@ export default function page() {
 		}
 	}
 
+	const { login } = language[nacionality]
+
 	return (
 		<main className={styles.container}>
 			<Stars />
@@ -52,17 +53,17 @@ export default function page() {
 				<h1 onClick={() => {
 					soundEffect(audioRefSelect)
 					setsection("identity")
-				}}>{language[nacionality].login.base.nationality}
+				}}>{login.base.nationality}
 				</h1>
 				<h1 onClick={() => {
 					soundEffect(audioRefSelect)
 					setsection("edit")
-				}}>{language[nacionality].login.base.edit}
+				}}>{login.base.edit}
 				</h1>
 				<h1 onClick={() => {
 					soundEffect(audioRefSelect)
 					setsection("name")
-				}}>{language[nacionality].login.base.resume}
+				}}>{login.base.resume}
 				</h1>
 			</section>
 
@@ -70,15 +71,11 @@ export default function page() {
 				{
 					section === "identity" ? (
 						<EditNacionality
-							flag={flag}
-							setFlag={setFlag}
-							handleChangeInput={handleChangeInput}
 							audioRefSelect={audioRefSelect}
 							soundEffect={soundEffect}
-							input={input}
 							nacionality={nacionality}
 							setNacionality={setNacionality}
-							lenguage={language[nacionality].login.nationality}
+							lenguage={login.nationality}
 						/>
 					) : section === "edit" ? (
 						<EditCharacter
@@ -96,7 +93,7 @@ export default function page() {
 							setcolors={setcolors}
 							setsuit={setsuit}
 							setselectColors={setselectColors}
-							lenguage={language[nacionality].login.edit}
+							lenguage={login.edit}
 						/>
 					) : (
 						<></>
@@ -106,7 +103,6 @@ export default function page() {
 
 
 
-			{/* <input placeholder='nombre' onChange={(e) => handleChangeInput(e)} className={styles.input} /> */}
 			<audio ref={audioRef} src="/assets/sounds/input.mp3" preload="auto" />
 			<audio ref={audioRefSelect} src="/assets/sounds/btn.mp3" preload="auto" />
 

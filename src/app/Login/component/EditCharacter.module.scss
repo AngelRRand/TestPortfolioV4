@@ -28,10 +28,15 @@
                 }
 
                 &:nth-of-type(2) {
-                    border: 3px solid white;
+                    border: 3px solid var(--streak);
                     width: 20vw;
                     height: 20vw;
                     background-color: white;
+
+                    .flag {
+                        position: absolute;
+                        top: 0;
+                    }
                 }
             }
         }
@@ -67,7 +72,7 @@
                     }
 
                     div {
-                        border: 1px solid white;
+                        border: 1px solid var(--streak);
                         background: white;
                         display: flex;
                         justify-content: center;
