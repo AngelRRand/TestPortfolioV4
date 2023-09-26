@@ -40,7 +40,7 @@ export default function page() {
 				setselectColors(10)
 				break
 			case 3:
-				setselectColors(8)
+				setselectColors(6)
 				break
 		}
 	}, [nacionality])

@@ -52,7 +52,7 @@ const EditNacionality: React.FC<editNacionality> = ({ soundEffect, audioRefSelec
 						<Image
 							width={45}
 							height={450}
-							alt='circule'
+							alt='palo'
 							src="/assets/palo.svg"
 							priority
 						/>
