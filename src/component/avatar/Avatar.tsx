@@ -98,6 +98,19 @@ const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, color
 							priority={true}
 						/>
 				}
+				{
+					showNacionality ? (
+						<Image
+							width={50}
+							height={50}
+							alt='circule'
+							src={flag}
+							className={styles.flag}
+						/>
+					) : (
+						<></>
+					)
+				}
 
 
 			</div>

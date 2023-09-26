@@ -5,28 +5,28 @@ import React from 'react'
 const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
   return (
     <svg version="1.1" viewBox='0 0 41 41' className={styles.colores} fill="currentColor" xmlns="http://www.w3.org/2000/svg" shapeRendering="crispEdges">
-      <rect x="27" y="3" width="1" height="1" fill={color} />
+      <rect x="27" y="3" width="1" height="1" fill={secondColor} />
       <rect x="9" y="4" width="1" height="1" fill={color} />
       <rect x="10" y="4" width="1" height="1" fill={color} />
-      <rect x="26" y="4" width="1" height="1" fill={color} />
-      <rect x="27" y="4" width="1" height="1" fill={color} />
-      <rect x="28" y="4" width="1" height="1" fill={color} />
+      <rect x="26" y="4" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="4" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="4" width="1" height="1" fill={secondColor} />
       <rect x="9" y="5" width="1" height="1" fill={color} />
       <rect x="10" y="5" width="1" height="1" fill={color} />
       <rect x="11" y="5" width="1" height="1" fill={color} />
-      <rect x="26" y="5" width="1" height="1" fill={color} />
-      <rect x="27" y="5" width="1" height="1" fill={color} />
-      <rect x="28" y="5" width="1" height="1" fill={color} />
+      <rect x="26" y="5" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="5" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="5" width="1" height="1" fill={secondColor} />
       <rect x="8" y="6" width="1" height="1" fill={color} />
       <rect x="9" y="6" width="1" height="1" fill={color} />
       <rect x="10" y="6" width="1" height="1" fill={color} />
       <rect x="11" y="6" width="1" height="1" fill={color} />
       <rect x="12" y="6" width="1" height="1" fill={color} />
-      <rect x="25" y="6" width="1" height="1" fill={color} />
-      <rect x="26" y="6" width="1" height="1" fill={color} />
-      <rect x="27" y="6" width="1" height="1" fill={color} />
-      <rect x="28" y="6" width="1" height="1" fill={color} />
-      <rect x="29" y="6" width="1" height="1" fill={color} />
+      <rect x="25" y="6" width="1" height="1" fill={secondColor} />
+      <rect x="26" y="6" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="6" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="6" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="6" width="1" height="1" fill={secondColor} />
       <rect x="8" y="7" width="1" height="1" fill={color} />
       <rect x="9" y="7" width="1" height="1" fill={color} />
       <rect x="10" y="7" width="1" height="1" fill={color} />
@@ -34,13 +34,13 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="12" y="7" width="1" height="1" fill={color} />
       <rect x="13" y="7" width="1" height="1" fill={color} />
       <rect x="14" y="7" width="1" height="1" fill={color} />
-      <rect x="24" y="7" width="1" height="1" fill={color} />
-      <rect x="25" y="7" width="1" height="1" fill={color} />
-      <rect x="26" y="7" width="1" height="1" fill={color} />
-      <rect x="27" y="7" width="1" height="1" fill={color} />
-      <rect x="28" y="7" width="1" height="1" fill={color} />
-      <rect x="29" y="7" width="1" height="1" fill={color} />
-      <rect x="30" y="7" width="1" height="1" fill={color} />
+      <rect x="24" y="7" width="1" height="1" fill={secondColor} />
+      <rect x="25" y="7" width="1" height="1" fill={secondColor} />
+      <rect x="26" y="7" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="7" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="7" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="7" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="7" width="1" height="1" fill={secondColor} />
       <rect x="8" y="8" width="1" height="1" fill={color} />
       <rect x="9" y="8" width="1" height="1" fill={color} />
       <rect x="10" y="8" width="1" height="1" fill={color} />
@@ -53,16 +53,16 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="18" y="8" width="1" height="1" fill={color} />
       <rect x="19" y="8" width="1" height="1" fill={color} />
       <rect x="20" y="8" width="1" height="1" fill={color} />
-      <rect x="21" y="8" width="1" height="1" fill={color} />
-      <rect x="22" y="8" width="1" height="1" fill={color} />
-      <rect x="23" y="8" width="1" height="1" fill={color} />
-      <rect x="24" y="8" width="1" height="1" fill={color} />
-      <rect x="25" y="8" width="1" height="1" fill={color} />
-      <rect x="26" y="8" width="1" height="1" fill={color} />
-      <rect x="27" y="8" width="1" height="1" fill={color} />
-      <rect x="28" y="8" width="1" height="1" fill={color} />
-      <rect x="29" y="8" width="1" height="1" fill={color} />
-      <rect x="30" y="8" width="1" height="1" fill={color} />
+      <rect x="21" y="8" width="1" height="1" fill={secondColor} />
+      <rect x="22" y="8" width="1" height="1" fill={secondColor} />
+      <rect x="23" y="8" width="1" height="1" fill={secondColor} />
+      <rect x="24" y="8" width="1" height="1" fill={secondColor} />
+      <rect x="25" y="8" width="1" height="1" fill={secondColor} />
+      <rect x="26" y="8" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="8" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="8" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="8" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="8" width="1" height="1" fill={secondColor} />
       <rect x="7" y="9" width="1" height="1" fill={color} />
       <rect x="8" y="9" width="1" height="1" fill={color} />
       <rect x="9" y="9" width="1" height="1" fill={color} />
@@ -76,16 +76,16 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="19" y="9" width="1" height="1" fill={color} />
       <rect x="20" y="9" width="1" height="1" fill={color} />
       <rect x="21" y="9" width="1" height="1" fill={color} />
-      <rect x="22" y="9" width="1" height="1" fill={color} />
-      <rect x="23" y="9" width="1" height="1" fill={color} />
-      <rect x="24" y="9" width="1" height="1" fill={color} />
-      <rect x="25" y="9" width="1" height="1" fill={color} />
-      <rect x="26" y="9" width="1" height="1" fill={color} />
-      <rect x="27" y="9" width="1" height="1" fill={color} />
-      <rect x="28" y="9" width="1" height="1" fill={color} />
-      <rect x="29" y="9" width="1" height="1" fill={color} />
-      <rect x="30" y="9" width="1" height="1" fill={color} />
-      <rect x="31" y="9" width="1" height="1" fill={color} />
+      <rect x="22" y="9" width="1" height="1" fill={secondColor} />
+      <rect x="23" y="9" width="1" height="1" fill={secondColor} />
+      <rect x="24" y="9" width="1" height="1" fill={secondColor} />
+      <rect x="25" y="9" width="1" height="1" fill={secondColor} />
+      <rect x="26" y="9" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="9" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="9" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="9" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="9" width="1" height="1" fill={secondColor} />
+      <rect x="31" y="9" width="1" height="1" fill={secondColor} />
       <rect x="7" y="10" width="1" height="1" fill={color} />
       <rect x="8" y="10" width="1" height="1" fill={color} />
       <rect x="9" y="10" width="1" height="1" fill={color} />
@@ -101,15 +101,15 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="20" y="10" width="1" height="1" fill={color} />
       <rect x="21" y="10" width="1" height="1" fill={color} />
       <rect x="22" y="10" width="1" height="1" fill={color} />
-      <rect x="23" y="10" width="1" height="1" fill={color} />
-      <rect x="24" y="10" width="1" height="1" fill={color} />
-      <rect x="25" y="10" width="1" height="1" fill={color} />
-      <rect x="26" y="10" width="1" height="1" fill={color} />
-      <rect x="27" y="10" width="1" height="1" fill={color} />
-      <rect x="28" y="10" width="1" height="1" fill={color} />
-      <rect x="29" y="10" width="1" height="1" fill={color} />
-      <rect x="30" y="10" width="1" height="1" fill={color} />
-      <rect x="31" y="10" width="1" height="1" fill={color} />
+      <rect x="23" y="10" width="1" height="1" fill={secondColor} />
+      <rect x="24" y="10" width="1" height="1" fill={secondColor} />
+      <rect x="25" y="10" width="1" height="1" fill={secondColor} />
+      <rect x="26" y="10" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="10" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="10" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="10" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="10" width="1" height="1" fill={secondColor} />
+      <rect x="31" y="10" width="1" height="1" fill={secondColor} />
       <rect x="6" y="11" width="1" height="1" fill={color} />
       <rect x="7" y="11" width="1" height="1" fill={color} />
       <rect x="8" y="11" width="1" height="1" fill={color} />
@@ -128,15 +128,15 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="21" y="11" width="1" height="1" fill={color} />
       <rect x="22" y="11" width="1" height="1" fill={color} />
       <rect x="23" y="11" width="1" height="1" fill={color} />
-      <rect x="24" y="11" width="1" height="1" fill={color} />
-      <rect x="25" y="11" width="1" height="1" fill={color} />
-      <rect x="26" y="11" width="1" height="1" fill={color} />
-      <rect x="27" y="11" width="1" height="1" fill={color} />
-      <rect x="28" y="11" width="1" height="1" fill={color} />
-      <rect x="29" y="11" width="1" height="1" fill={color} />
-      <rect x="30" y="11" width="1" height="1" fill={color} />
-      <rect x="31" y="11" width="1" height="1" fill={color} />
-      <rect x="32" y="11" width="1" height="1" fill={color} />
+      <rect x="24" y="11" width="1" height="1" fill={secondColor} />
+      <rect x="25" y="11" width="1" height="1" fill={secondColor} />
+      <rect x="26" y="11" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="11" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="11" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="11" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="11" width="1" height="1" fill={secondColor} />
+      <rect x="31" y="11" width="1" height="1" fill={secondColor} />
+      <rect x="32" y="11" width="1" height="1" fill={secondColor} />
       <rect x="6" y="12" width="1" height="1" fill={color} />
       <rect x="7" y="12" width="1" height="1" fill={color} />
       <rect x="8" y="12" width="1" height="1" fill={color} />
@@ -155,15 +155,15 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="21" y="12" width="1" height="1" fill={color} />
       <rect x="22" y="12" width="1" height="1" fill={color} />
       <rect x="23" y="12" width="1" height="1" fill={color} />
-      <rect x="24" y="12" width="1" height="1" fill={color} />
-      <rect x="25" y="12" width="1" height="1" fill={color} />
-      <rect x="26" y="12" width="1" height="1" fill={color} />
-      <rect x="27" y="12" width="1" height="1" fill={color} />
-      <rect x="28" y="12" width="1" height="1" fill={color} />
-      <rect x="29" y="12" width="1" height="1" fill={color} />
-      <rect x="30" y="12" width="1" height="1" fill={color} />
-      <rect x="31" y="12" width="1" height="1" fill={color} />
-      <rect x="32" y="12" width="1" height="1" fill={color} />
+      <rect x="24" y="12" width="1" height="1" fill={secondColor} />
+      <rect x="25" y="12" width="1" height="1" fill={secondColor} />
+      <rect x="26" y="12" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="12" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="12" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="12" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="12" width="1" height="1" fill={secondColor} />
+      <rect x="31" y="12" width="1" height="1" fill={secondColor} />
+      <rect x="32" y="12" width="1" height="1" fill={secondColor} />
       <rect x="6" y="13" width="1" height="1" fill={color} />
       <rect x="7" y="13" width="1" height="1" fill={color} />
       <rect x="8" y="13" width="1" height="1" fill={color} />
@@ -183,15 +183,15 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="22" y="13" width="1" height="1" fill={color} />
       <rect x="23" y="13" width="1" height="1" fill={color} />
       <rect x="24" y="13" width="1" height="1" fill={color} />
-      <rect x="25" y="13" width="1" height="1" fill={color} />
-      <rect x="26" y="13" width="1" height="1" fill={color} />
-      <rect x="27" y="13" width="1" height="1" fill={color} />
-      <rect x="28" y="13" width="1" height="1" fill={color} />
-      <rect x="29" y="13" width="1" height="1" fill={color} />
-      <rect x="30" y="13" width="1" height="1" fill={color} />
-      <rect x="31" y="13" width="1" height="1" fill={color} />
-      <rect x="32" y="13" width="1" height="1" fill={color} />
-      <rect x="33" y="13" width="1" height="1" fill={color} />
+      <rect x="25" y="13" width="1" height="1" fill={secondColor} />
+      <rect x="26" y="13" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="13" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="13" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="13" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="13" width="1" height="1" fill={secondColor} />
+      <rect x="31" y="13" width="1" height="1" fill={secondColor} />
+      <rect x="32" y="13" width="1" height="1" fill={secondColor} />
+      <rect x="33" y="13" width="1" height="1" fill={secondColor} />
       <rect x="5" y="14" width="1" height="1" fill={color} />
       <rect x="6" y="14" width="1" height="1" fill={color} />
       <rect x="7" y="14" width="1" height="1" fill={color} />
@@ -211,15 +211,15 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="22" y="14" width="1" height="1" fill={color} />
       <rect x="23" y="14" width="1" height="1" fill={color} />
       <rect x="24" y="14" width="1" height="1" fill={color} />
-      <rect x="25" y="14" width="1" height="1" fill={color} />
-      <rect x="26" y="14" width="1" height="1" fill={color} />
-      <rect x="27" y="14" width="1" height="1" fill={color} />
-      <rect x="28" y="14" width="1" height="1" fill={color} />
-      <rect x="29" y="14" width="1" height="1" fill={color} />
-      <rect x="30" y="14" width="1" height="1" fill={color} />
-      <rect x="31" y="14" width="1" height="1" fill={color} />
-      <rect x="32" y="14" width="1" height="1" fill={color} />
-      <rect x="33" y="14" width="1" height="1" fill={color} />
+      <rect x="25" y="14" width="1" height="1" fill={secondColor} />
+      <rect x="26" y="14" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="14" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="14" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="14" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="14" width="1" height="1" fill={secondColor} />
+      <rect x="31" y="14" width="1" height="1" fill={secondColor} />
+      <rect x="32" y="14" width="1" height="1" fill={secondColor} />
+      <rect x="33" y="14" width="1" height="1" fill={secondColor} />
       <rect x="4" y="15" width="1" height="1" fill={color} />
       <rect x="5" y="15" width="1" height="1" fill={color} />
       <rect x="6" y="15" width="1" height="1" fill={color} />
@@ -239,14 +239,14 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="23" y="15" width="1" height="1" fill={color} />
       <rect x="24" y="15" width="1" height="1" fill={color} />
       <rect x="25" y="15" width="1" height="1" fill={color} />
-      <rect x="26" y="15" width="1" height="1" fill={color} />
-      <rect x="27" y="15" width="1" height="1" fill={color} />
-      <rect x="28" y="15" width="1" height="1" fill={color} />
-      <rect x="29" y="15" width="1" height="1" fill={color} />
-      <rect x="30" y="15" width="1" height="1" fill={color} />
-      <rect x="31" y="15" width="1" height="1" fill={color} />
-      <rect x="33" y="15" width="1" height="1" fill={color} />
-      <rect x="34" y="15" width="1" height="1" fill={color} />
+      <rect x="26" y="15" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="15" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="15" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="15" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="15" width="1" height="1" fill={secondColor} />
+      <rect x="31" y="15" width="1" height="1" fill={secondColor} />
+      <rect x="33" y="15" width="1" height="1" fill={secondColor} />
+      <rect x="34" y="15" width="1" height="1" fill={secondColor} />
       <rect x="3" y="16" width="1" height="1" fill={color} />
       <rect x="4" y="16" width="1" height="1" fill={color} />
       <rect x="5" y="16" width="1" height="1" fill={color} />
@@ -264,13 +264,13 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="22" y="16" width="1" height="1" fill={color} />
       <rect x="23" y="16" width="1" height="1" fill={color} />
       <rect x="24" y="16" width="1" height="1" fill={color} />
-      <rect x="25" y="16" width="1" height="1" fill={color} />
-      <rect x="26" y="16" width="1" height="1" fill={color} />
-      <rect x="27" y="16" width="1" height="1" fill={color} />
-      <rect x="28" y="16" width="1" height="1" fill={color} />
-      <rect x="29" y="16" width="1" height="1" fill={color} />
-      <rect x="34" y="16" width="1" height="1" fill={color} />
-      <rect x="35" y="16" width="1" height="1" fill={color} />
+      <rect x="25" y="16" width="1" height="1" fill={secondColor} />
+      <rect x="26" y="16" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="16" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="16" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="16" width="1" height="1" fill={secondColor} />
+      <rect x="34" y="16" width="1" height="1" fill={secondColor} />
+      <rect x="35" y="16" width="1" height="1" fill={secondColor} />
       <rect x="4" y="17" width="1" height="1" fill={color} />
       <rect x="5" y="17" width="1" height="1" fill={color} />
       <rect x="6" y="17" width="1" height="1" fill={color} />
@@ -286,13 +286,13 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="21" y="17" width="1" height="1" fill={color} />
       <rect x="22" y="17" width="1" height="1" fill={color} />
       <rect x="23" y="17" width="1" height="1" fill={color} />
-      <rect x="26" y="17" width="1" height="1" fill={color} />
-      <rect x="27" y="17" width="1" height="1" fill={color} />
-      <rect x="28" y="17" width="1" height="1" fill={color} />
+      <rect x="26" y="17" width="1" height="1" fill={secondColor} />
+      <rect x="27" y="17" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="17" width="1" height="1" fill={secondColor} />
       <rect x="30" y="17" width="1" height="1" fill="#abdb96" />
-      <rect x="34" y="17" width="1" height="1" fill={color} />
-      <rect x="35" y="17" width="1" height="1" fill={color} />
-      <rect x="36" y="17" width="1" height="1" fill={color} />
+      <rect x="34" y="17" width="1" height="1" fill={secondColor} />
+      <rect x="35" y="17" width="1" height="1" fill={secondColor} />
+      <rect x="36" y="17" width="1" height="1" fill={secondColor} />
       <rect x="6" y="18" width="1" height="1" fill={color} />
       <rect x="7" y="18" width="1" height="1" fill={color} />
       <rect x="8" y="18" width="1" height="1" fill={color} />
@@ -306,14 +306,14 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="20" y="18" width="1" height="1" fill={color} />
       <rect x="21" y="18" width="1" height="1" fill={color} />
       <rect x="22" y="18" width="1" height="1" fill={color} />
-      <rect x="27" y="18" width="1" height="1" fill={color} />
-      <rect x="28" y="18" width="1" height="1" fill={color} />
+      <rect x="27" y="18" width="1" height="1" fill={secondColor} />
+      <rect x="28" y="18" width="1" height="1" fill={secondColor} />
       <rect x="30" y="18" width="1" height="1" fill="#192116" />
       <rect x="31" y="18" width="1" height="1" fill="#abdb96" />
-      <rect x="33" y="18" width="1" height="1" fill={color} />
-      <rect x="34" y="18" width="1" height="1" fill={color} />
-      <rect x="35" y="18" width="1" height="1" fill={color} />
-      <rect x="7" y="19" width="1" height="1" fill={color} />
+      <rect x="33" y="18" width="1" height="1" fill={secondColor} />
+      <rect x="34" y="18" width="1" height="1" fill={secondColor} />
+      <rect x="35" y="18" width="1" height="1" fill={secondColor} />
+      <rect x="7" y="19" width="1" height="1" fill={secondColor} />
       <rect x="8" y="19" width="1" height="1" fill={color} />
       <rect x="9" y="19" width="1" height="1" fill={color} />
       <rect x="10" y="19" width="1" height="1" fill={color} />
@@ -324,86 +324,73 @@ const Horizontal: React.FC<LooksColor> = ({ color, secondColor }) => {
       <rect x="19" y="19" width="1" height="1" fill={color} />
       <rect x="20" y="19" width="1" height="1" fill={color} />
       <rect x="21" y="19" width="1" height="1" fill={color} />
-      <rect x="28" y="19" width="1" height="1" fill={color} />
-      <rect x="29" y="19" width="1" height="1" fill={color} />
-      <rect x="32" y="19" width="1" height="1" fill={color} />
-      <rect x="33" y="19" width="1" height="1" fill={color} />
-      <rect x="34" y="19" width="1" height="1" fill={color} />
-      <rect x="7" y="20" width="1" height="1" fill={color} />
-      <rect x="8" y="20" width="1" height="1" fill={color} />
-      <rect x="9" y="20" width="1" height="1" fill={color} />
-      <rect x="10" y="20" width="1" height="1" fill={color} />
-      <rect x="11" y="20" width="1" height="1" fill={color} />
+      <rect x="28" y="19" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="19" width="1" height="1" fill={secondColor} />
+      <rect x="32" y="19" width="1" height="1" fill={secondColor} />
+      <rect x="33" y="19" width="1" height="1" fill={secondColor} />
+      <rect x="34" y="19" width="1" height="1" fill={secondColor} />
+      <rect x="7" y="20" width="1" height="1" fill={secondColor} />
+      <rect x="8" y="20" width="1" height="1" fill={secondColor} />
       <rect x="12" y="20" width="1" height="1" fill={color} />
       <rect x="13" y="20" width="1" height="1" fill={color} />
       <rect x="14" y="20" width="1" height="1" fill={color} />
       <rect x="15" y="20" width="1" height="1" fill={color} />
       <rect x="16" y="20" width="1" height="1" fill={color} />
-      <rect x="18" y="20" width="1" height="1" fill={color} />
+      <rect x="18" y="20" width="1" height="1" fill={secondColor} />
       <rect x="19" y="20" width="1" height="1" fill={color} />
       <rect x="20" y="20" width="1" height="1" fill={color} />
       <rect x="21" y="20" width="1" height="1" fill={color} />
-      <rect x="28" y="20" width="1" height="1" fill={color} />
-      <rect x="29" y="20" width="1" height="1" fill={color} />
-      <rect x="30" y="20" width="1" height="1" fill={color} />
-      <rect x="32" y="20" width="1" height="1" fill={color} />
-      <rect x="33" y="20" width="1" height="1" fill={color} />
-      <rect x="7" y="21" width="1" height="1" fill={color} />
-      <rect x="8" y="21" width="1" height="1" fill={color} />
-      <rect x="9" y="21" width="1" height="1" fill={color} />
-      <rect x="10" y="21" width="1" height="1" fill={color} />
-      <rect x="11" y="21" width="1" height="1" fill={color} />
-      <rect x="12" y="21" width="1" height="1" fill={color} />
-      <rect x="13" y="21" width="1" height="1" fill={color} />
-      <rect x="14" y="21" width="1" height="1" fill={color} />
+      <rect x="28" y="20" width="1" height="1" fill={secondColor} />
+      <rect x="29" y="20" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="20" width="1" height="1" fill={secondColor} />
+      <rect x="32" y="20" width="1" height="1" fill={secondColor} />
+      <rect x="33" y="20" width="1" height="1" fill={secondColor} />
+      <rect x="7" y="21" width="1" height="1" fill={secondColor} />
+      <rect x="8" y="21" width="1" height="1" fill={secondColor} />
+      <rect x="9" y="21" width="1" height="1" fill={secondColor} />
       <rect x="15" y="21" width="1" height="1" fill={color} />
       <rect x="16" y="21" width="1" height="1" fill={color} />
       <rect x="17" y="21" width="1" height="1" fill={color} />
       <rect x="18" y="21" width="1" height="1" fill={color} />
       <rect x="19" y="21" width="1" height="1" fill={color} />
       <rect x="20" y="21" width="1" height="1" fill={color} />
-      <rect x="29" y="21" width="1" height="1" fill={color} />
-      <rect x="30" y="21" width="1" height="1" fill={color} />
-      <rect x="31" y="21" width="1" height="1" fill={color} />
-      <rect x="32" y="21" width="1" height="1" fill={color} />
-      <rect x="33" y="21" width="1" height="1" fill={color} />
-      <rect x="7" y="22" width="1" height="1" fill={color} />
-      <rect x="8" y="22" width="1" height="1" fill={color} />
-      <rect x="9" y="22" width="1" height="1" fill={color} />
-      <rect x="10" y="22" width="1" height="1" fill={color} />
-      <rect x="11" y="22" width="1" height="1" fill={color} />
-      <rect x="31" y="22" width="1" height="1" fill={color} />
-      <rect x="32" y="22" width="1" height="1" fill={color} />
-      <rect x="33" y="22" width="1" height="1" fill={color} />
-      <rect x="6" y="23" width="1" height="1" fill={color} />
-      <rect x="7" y="23" width="1" height="1" fill={color} />
-      <rect x="8" y="23" width="1" height="1" fill={color} />
-      <rect x="33" y="23" width="1" height="1" fill={color} />
-      <rect x="34" y="23" width="1" height="1" fill={color} />
+      <rect x="29" y="21" width="1" height="1" fill={secondColor} />
+      <rect x="30" y="21" width="1" height="1" fill={secondColor} />
+      <rect x="31" y="21" width="1" height="1" fill={secondColor} />
+      <rect x="7" y="22" width="1" height="1" fill={secondColor} />
+      <rect x="8" y="22" width="1" height="1" fill={secondColor} />
+      <rect x="9" y="22" width="1" height="1" fill={secondColor} />
+      <rect x="10" y="22" width="1" height="1" fill={secondColor} />
+      <rect x="11" y="22" width="1" height="1" fill={secondColor} />
+      <rect x="6" y="23" width="1" height="1" fill={secondColor} />
+      <rect x="7" y="23" width="1" height="1" fill={secondColor} />
+      <rect x="8" y="23" width="1" height="1" fill={secondColor} />
+      <rect x="33" y="23" width="1" height="1" fill={secondColor} />
+      <rect x="34" y="23" width="1" height="1" fill={secondColor} />
       <rect x="14" y="36" width="1" height="1" fill={color} />
       <rect x="15" y="36" width="1" height="1" fill={color} />
-      <rect x="18" y="36" width="1" height="1" fill={color} />
+      <rect x="18" y="36" width="1" height="1" fill={secondColor} />
       <rect x="14" y="37" width="1" height="1" fill={color} />
       <rect x="15" y="37" width="1" height="1" fill={color} />
-      <rect x="16" y="37" width="1" height="1" fill={color} />
-      <rect x="17" y="37" width="1" height="1" fill={color} />
-      <rect x="18" y="37" width="1" height="1" fill={color} />
-      <rect x="19" y="37" width="1" height="1" fill={color} />
+      <rect x="16" y="37" width="1" height="1" fill={secondColor} />
+      <rect x="17" y="37" width="1" height="1" fill={secondColor} />
+      <rect x="18" y="37" width="1" height="1" fill={secondColor} />
+      <rect x="19" y="37" width="1" height="1" fill={secondColor} />
       <rect x="15" y="38" width="1" height="1" fill={color} />
       <rect x="16" y="38" width="1" height="1" fill={color} />
-      <rect x="17" y="38" width="1" height="1" fill={color} />
-      <rect x="19" y="38" width="1" height="1" fill={color} />
-      <rect x="20" y="38" width="1" height="1" fill={color} />
-      <rect x="21" y="38" width="1" height="1" fill={color} />
-      <rect x="22" y="38" width="1" height="1" fill={color} />
+      <rect x="17" y="38" width="1" height="1" fill={secondColor} />
+      <rect x="19" y="38" width="1" height="1" fill={secondColor} />
+      <rect x="20" y="38" width="1" height="1" fill={secondColor} />
+      <rect x="21" y="38" width="1" height="1" fill={secondColor} />
+      <rect x="22" y="38" width="1" height="1" fill={secondColor} />
       <rect x="16" y="39" width="1" height="1" fill={color} />
       <rect x="17" y="39" width="1" height="1" fill={color} />
       <rect x="18" y="39" width="1" height="1" fill={color} />
-      <rect x="23" y="39" width="1" height="1" fill={color} />
-      <rect x="24" y="39" width="1" height="1" fill={color} />
+      <rect x="23" y="39" width="1" height="1" fill={secondColor} />
+      <rect x="24" y="39" width="1" height="1" fill={secondColor} />
       <rect x="18" y="40" width="1" height="1" fill={color} />
       <rect x="19" y="40" width="1" height="1" fill={color} />
-      <rect x="25" y="40" width="1" height="1" fill={color} />
+      <rect x="25" y="40" width="1" height="1" fill={secondColor} />
     </svg>
   )
 }
