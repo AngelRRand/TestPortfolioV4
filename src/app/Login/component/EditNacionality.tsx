@@ -17,7 +17,6 @@ const EditNacionality: React.FC<editNacionality> = ({ soundEffect, audioRefSelec
 			"/assets/icon/create_character/btnSpain.svg"
 	]
 
-
 	const soundEffectHimnos = (audio: any) => {
 		if (audio.current) {
 			audio.current.currentTime = 0.1;
@@ -32,14 +31,14 @@ const EditNacionality: React.FC<editNacionality> = ({ soundEffect, audioRefSelec
 				<Image
 					width={450}
 					height={450}
-					alt='circule'
-					src="/assets/Circulopequeño.svg"
+					alt='circle'
+					src="/assets/circleSmall.svg"
 					priority
 				/>
 				<Image
 					width={450}
 					height={450}
-					alt='circule'
+					alt='flag'
 					src={lenguage.flag}
 					priority
 					className={styles.flag}
@@ -96,16 +95,16 @@ const EditNacionality: React.FC<editNacionality> = ({ soundEffect, audioRefSelec
 								)
 							})
 						} 
-
 					</div>
 					<p>{lenguage.text_presentation}</p>
-					<p>{lenguage.frase}</p>
+					<p>{lenguage.phrase.text}</p>
+					<p>- {lenguage.phrase.author} -</p>
 				</article>
-
 			</section>
 			<audio ref={audioRef} src={lenguage.himno} preload="auto" />
 		</div>
 	)
+
 }
 
 export default EditNacionality

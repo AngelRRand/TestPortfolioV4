@@ -47,7 +47,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 						width={450}
 						height={450}
 						alt='circule'
-						src="/assets/Circulo.svg"
+						src="/assets/cicle.svg"
 						priority
 					/>
 					{

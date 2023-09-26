@@ -28,6 +28,23 @@ export default function page() {
 	const [colors, setcolors] = useState(0)
 	const [selectColors, setselectColors] = useState(4)
 
+	useEffect(() => {
+		switch (nacionality) {
+			case 0:
+				setselectColors(5)
+				break
+			case 1:
+				setselectColors(3)
+				break
+			case 2:
+				setselectColors(10)
+				break
+			case 3:
+				setselectColors(8)
+				break
+		}
+	}, [nacionality])
+
 
 	const handleChangeInput = (e: ChangeEvent<HTMLInputElement>) => {
 		const inputValue = e.target.value;

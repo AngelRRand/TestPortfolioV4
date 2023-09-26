@@ -51,14 +51,17 @@
             color: white;
 
             article {
+                position: relative;
+                text-align: center;
                 width: 25vw;
                 height: 75vh;
-                border: 1px solid white;
+                border: 2px solid white;
                 background-color: rgb(9, 10, 19);
                 padding: 10px;
-                text-align: center;
-                position: relative;
 
+                > p {
+                    color: white;
+                }
                 .select {
                     position: absolute;
                     left: -5vw;

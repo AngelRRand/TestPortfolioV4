@@ -71,7 +71,7 @@ export interface editNacionality {
 	lenguage: {
 		name: string;
 		text_presentation: string;
-		frase: string;
+		phrase: {text:string, author:string};
 		himno: string;
 		flag:string;
 	};
