@@ -5,7 +5,6 @@ import styles from './Resume.module.scss';
 const Resume = () => {
   return (
     <div className={styles.container}>
-        {/* <SpriteBox/> */}
 
     </div>
   )

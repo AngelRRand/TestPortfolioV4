@@ -19,7 +19,7 @@ export default function page() {
 	const [name, setName] = useLocalStorage('name', '');
 	const audioRef = useRef<HTMLAudioElement | null>(null);
 	const audioRefSelect = useRef<HTMLAudioElement | null>(null);
-
+	
 	/* Character state */
 	const [nacionality, setNacionality] = useState(0)
 	const [genderType, setGenderType] = useState(1)
@@ -28,6 +28,7 @@ export default function page() {
 	const [suit, setsuit] = useState(0)
 	const [colors, setcolors] = useState(0)
 	const [selectColors, setselectColors] = useState(4)
+	
 
 	useEffect(() => {
 		switch (nacionality) {

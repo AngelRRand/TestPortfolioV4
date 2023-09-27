@@ -35,9 +35,10 @@ let selectores = [
 ]
 
 const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, colors, selectColors, audioRefSelect, setGenderType, soundEffect, setBase, setHair, setcolors, setsuit, setselectColors, lenguage }) => {
-	
+
 	const [btnPress, setBtnPress] = useState("url(/assets/icon/create_character/btnFondoR.svg)")
 	const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
+	const [showSprite, setShowSprite] = useState(0)
 
 	return (
 		<div className={styles.container}>
@@ -77,7 +78,8 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 						showNacionality={true}
 						flag={lenguage.flag}
 					/>
-
+					
+					
 					<div
 						className={styles.options}
 						style={{ backgroundImage: btnPress }}

@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './Sprite.module.scss';
+import { sprite } from '@/src/interface';
 
-const Sprite: any = ({ position }) => {
+const Sprite: React.FC<sprite> = ({ position }) => {
     return (
         <svg version="1.1" className={styles.sprite} viewBox={`${position.x} ${position.y} 128 32`} fill="currentColor" xmlns="http://www.w3.org/2000/svg" shapeRendering="crispEdges">
             <rect x="11" y="4" width="1" height="1" fill="#1A1715" />

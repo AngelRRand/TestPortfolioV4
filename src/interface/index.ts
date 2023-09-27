@@ -21,8 +21,9 @@ export interface AvatarConfig {
 	color: number,
 	colorPrincipal: string,
 	colorSecond: string,
-	showNacionality:boolean
-	flag: string
+	showNacionality: boolean
+	flag: string,
+
 }
 
 export interface LooksColor {
@@ -57,7 +58,7 @@ export interface editCharacter {
 		races: string[][];
 		looks: string[];
 		styles: string[];
-		flag:string
+		flag: string
 	};
 }
 
@@ -71,8 +72,33 @@ export interface editNacionality {
 	lenguage: {
 		name: string;
 		text_presentation: string;
-		phrase: {text:string, author:string};
+		phrase: { text: string, author: string };
 		himno: string;
-		flag:string;
+		flag: string;
 	};
+}
+
+
+
+
+export interface spriteBox {
+	style: string
+}
+
+
+
+export interface sprite {
+	position: position
+}
+
+
+export interface spriteHair {
+	position: position
+	color: string,
+	secondColor: string
+}
+
+interface position {
+	x: number
+	y: number
 }
