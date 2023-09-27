@@ -35,7 +35,7 @@ let selectores = [
 ]
 
 const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, colors, selectColors, audioRefSelect, setGenderType, soundEffect, setBase, setHair, setcolors, setsuit, setselectColors, lenguage }) => {
-
+	
 	const [btnPress, setBtnPress] = useState("url(/assets/icon/create_character/btnFondoR.svg)")
 	const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
 
@@ -195,6 +195,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 													soundEffect(audioRefSelect)
 													setselectColors(i)
 												}}
+												key={i}
 											>
 												<Image
 													width={50}

@@ -185,22 +185,22 @@ const Vertical: React.FC<LooksColor> = ({ color, secondColor }) => {
             <rect x="9" y="17" width="1" height="1" fill={color} />
             <rect x="10" y="17" width="1" height="1" fill={color} />
             <rect x="11" y="17" width="1" height="1" fill={color} />
-            <rect x="16" y="17" width="1" height="1" fill="#3C5830" />
-            <rect x="17" y="17" width="1" height="1" fill="#3C5830" />
+            <rect x="16" y="17" width="1" height="1" fill="#abdb96" />
+            <rect x="17" y="17" width="1" height="1" fill="#abdb96" />
             <rect x="19" y="17" width="1" height="1" fill={color} />
             <rect x="20" y="17" width="1" height="1" fill={color} />
             <rect x="21" y="17" width="1" height="1" fill={color} />
             <rect x="22" y="17" width="1" height="1" fill={color} />
             <rect x="23" y="17" width="1" height="1" fill={color} />
             <rect x="24" y="17" width="1" height="1" fill={color} />
-            <rect x="30" y="17" width="1" height="1" fill="#3C5830" />
+            <rect x="30" y="17" width="1" height="1" fill="#abdb96" />
             <rect x="7" y="18" width="1" height="1" fill={color} />
             <rect x="8" y="18" width="1" height="1" fill={color} />
             <rect x="9" y="18" width="1" height="1" fill={color} />
             <rect x="10" y="18" width="1" height="1" fill={color} />
             <rect x="11" y="18" width="1" height="1" fill={color} />
             <rect x="12" y="18" width="1" height="1" fill={color} />
-            <rect x="15" y="18" width="1" height="1" fill="#3C5830" />
+            <rect x="15" y="18" width="1" height="1" fill="#abdb96" />
             <rect x="16" y="18" width="1" height="1" fill="#192116" />
             <rect x="17" y="18" width="1" height="1" fill="#192116" />
             <rect x="20" y="18" width="1" height="1" fill={color} />
@@ -209,7 +209,7 @@ const Vertical: React.FC<LooksColor> = ({ color, secondColor }) => {
             <rect x="23" y="18" width="1" height="1" fill={color} />
             <rect x="24" y="18" width="1" height="1" fill={secondColor} />
             <rect x="30" y="18" width="1" height="1" fill="#192116" />
-            <rect x="31" y="18" width="1" height="1" fill="#3C5830" />
+            <rect x="31" y="18" width="1" height="1" fill="#abdb96" />
             <rect x="8" y="19" width="1" height="1" fill={color} />
             <rect x="9" y="19" width="1" height="1" fill={color} />
             <rect x="10" y="19" width="1" height="1" fill={color} />

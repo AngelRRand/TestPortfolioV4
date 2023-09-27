@@ -13,15 +13,15 @@ const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, color
 		return (
 			<div className={styles.container}>
 				<Image
-					width={265}
-					height={265}
+					width={400}
+					height={400}
 					alt='base'
 					src={newdata.base}
 					priority={true}
 				/>
 				<Image
-					width={265}
-					height={265}
+					width={400}
+					height={400}
 					alt='hair'
 					src={newdata.hair[hair].img}
 					priority={true}
@@ -38,8 +38,8 @@ const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, color
 						:
 
 						<Image
-							width={265}
-							height={265}
+							width={400}
+							height={400}
 							alt='suit'
 							src={newdata.suit[suit].img}
 							priority={true}
@@ -66,38 +66,40 @@ const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, color
 		return (
 			<div className={styles.container}>
 				<Image
-					width={265}
-					height={265}
+					width={400}
+					height={400}
 					alt='base'
 					src={newdata.base}
 					priority={true}
 				/>
-				<CatColors
-					color={colorPrincipal}
-					secondColor={colorSecond}
-					position={color}
-					gender={gender}
-				/>
+				
 				<Image
-					width={265}
-					height={265}
+					width={400}
+					height={400}
 					alt='hair'
 					src={newdata.hair[hair].img}
 					priority={true}
 				/>
+				
 				{
 					newdata.suit[suit].img === "" ?
 						<></>
 						:
 
 						<Image
-							width={265}
-							height={265}
+							width={400}
+							height={400}
 							alt='suit'
 							src={newdata.suit[suit].img}
 							priority={true}
 						/>
 				}
+				<CatColors
+					color={colorPrincipal}
+					secondColor={colorSecond}
+					position={color}
+					gender={gender}
+				/>
 				{
 					showNacionality ? (
 						<Image

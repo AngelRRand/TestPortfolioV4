@@ -7,6 +7,7 @@ import EditCharacter from './component/EditCharacter';
 import EditNacionality from './component/EditNacionality';
 
 import language from "../../../public/assets/create_character/language.json"
+import Resume from './component/Resume';
 
 
 
@@ -113,7 +114,9 @@ export default function page() {
 							lenguage={login.edit}
 						/>
 					) : (
-						<></>
+						<Resume
+						
+						/>
 					)
 				}
 			</div>

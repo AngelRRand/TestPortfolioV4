@@ -4,7 +4,7 @@ import { LooksColor } from '@/src/interface';
 
 const Stripes: React.FC<LooksColor> = ({ color, secondColor }) => {
     return (
-        <svg version="1.1" viewBox='0 0 41 41' className={styles.colores} fill="currentColor" xmlns="http://www.w3.org/2000/svg" shapeRendering="crispEdges">
+        <svg version="1.1"  viewBox='0 0 41 41' className={styles.colores} fill="currentColor"  xmlns="http://www.w3.org/2000/svg" shapeRendering="crispEdges">
             <rect x="8" y="3" width="1" height="1" fill={color} />
             <rect x="9" y="3" width="1" height="1" fill={color} />
             <rect x="27" y="3" width="1" height="1" fill={secondColor} />
