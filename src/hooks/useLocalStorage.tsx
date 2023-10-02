@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { IUseLocalStorage } from '../interface';
 
 const useLocalStorage: IUseLocalStorage = (key, initialValue) => {
