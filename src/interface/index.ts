@@ -21,7 +21,7 @@ export interface AvatarConfig {
 	color: number,
 	colorPrincipal: string,
 	colorSecond: string,
-	showNacionality: boolean
+	showNacionality: boolean,
 	flag: string,
 
 }
