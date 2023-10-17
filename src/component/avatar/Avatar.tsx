@@ -6,7 +6,7 @@ import { AvatarConfig } from '@/src/interface';
 import HumanColors from './hair/human/HumanColors';
 import CatColors from './hair/cat/CatColors';
 import SpriteBox from '@/src/component/sprite/SpriteBox';
-const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, colorPrincipal, colorSecond, showNacionality = false, flag }) => {
+const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, colorPrincipal, colorSecond, showNationality = false, flag }) => {
 	const [show, setshow] = useState(false)
 	let raza = data[base]
 	if (raza.name === "Human") {
@@ -48,7 +48,7 @@ const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, color
 						/>
 				}
 				{
-					showNacionality ? (
+					showNationality ? (
 						<Image
 							width={50}
 							height={50}
@@ -61,7 +61,7 @@ const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, color
 					)
 				}
 				{
-					showNacionality ? (
+					showNationality ? (
 						<>
 							<h2 onClick={() => setshow(!show)} className={styles.switch}>Switch</h2>
 							<article style={{ opacity: show ? 1 : 0 }}>
@@ -117,7 +117,7 @@ const Avatar: React.FC<AvatarConfig> = ({ gender, base, hair, suit, color, color
 					gender={gender}
 				/>
 				{
-					showNacionality ? (
+					showNationality ? (
 						<Image
 							width={50}
 							height={50}

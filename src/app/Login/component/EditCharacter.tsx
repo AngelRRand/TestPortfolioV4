@@ -75,7 +75,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 						color={colors}
 						colorPrincipal={colorsJson[selectColors].rgb}
 						colorSecond={colorsJson[selectColors].rgb2}
-						showNacionality={true}
+						showNationality={true}
 						flag={lenguage.flag}
 					/>
 					
@@ -132,7 +132,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 												color={colors}
 												colorPrincipal={colorsJson[selectColors].rgb}
 												colorSecond={colorsJson[selectColors].rgb2}
-												showNacionality={false}
+												showNationality={false}
 												flag={lenguage.flag}
 
 											/>
@@ -157,7 +157,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 													color={i}
 													colorPrincipal={colorsJson[selectColors].rgb}
 													colorSecond={colorsJson[selectColors].rgb2}
-													showNacionality={false}
+													showNationality={false}
 													flag={lenguage.flag}
 
 												/>
@@ -180,7 +180,7 @@ const EditCharacter: React.FC<editCharacter> = ({ genderType, base, hair, suit, 
 													color={colors}
 													colorPrincipal={colorsJson[selectColors].rgb}
 													colorSecond={colorsJson[selectColors].rgb2}
-													showNacionality={false}
+													showNationality={false}
 													flag={lenguage.flag}
 
 												/>
