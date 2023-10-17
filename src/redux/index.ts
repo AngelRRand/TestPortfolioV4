@@ -1,9 +1,11 @@
 import {configureStore} from '@reduxjs/toolkit';
 import {combineReducers} from 'redux';
 import app from './reducer/app';
+import avatar from './reducer/avatar';
 
 const rootReducer = combineReducers({
-    app
+    app,
+    avatar
 });
 
 export const store = configureStore({
