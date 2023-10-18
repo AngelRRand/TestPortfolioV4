@@ -45,7 +45,7 @@ export default function page() {
         soundEffect('/assets/sounds/btn.mp3')
         setSection(text)
     }
-
+    // sada
     return (
         <main className={styles.container}>
             <Stars/>
@@ -57,6 +57,7 @@ export default function page() {
                 <h1 onClick={() => selectSection("resume")}>{login.base.resume}
                 </h1>
             </section>
+
 
             <div className={styles.containerMain}>
                 {
