@@ -25,10 +25,9 @@ export default function page() {
     const [name, setName] = useLocalStorage('name', '');
 
 
-    const avatar = useSelector((state: RootState) => state.avatar);
+    const nationality = useSelector((state: RootState) => state.avatar.nationality);
     const dispatch: Dispatch = useDispatch();
 
-    const {nationality} = avatar
     const {login} = language[nationality]
 
     useEffect(() => {
@@ -74,7 +73,6 @@ export default function page() {
                         />
                     ) : section === "edit" ? (
                         <EditCharacter
-                            avatar={avatar}
                             language={login.edit}
                         />
                     ) : (

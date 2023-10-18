@@ -6,9 +6,11 @@ export interface InitialStateAvatar {
     hairColor: number,
     selectColor: number,
     suit: number,
-    colorPrincipal: string,
-    colorSecond: string,
     flag: string,
+    colors: {
+        colorPrincipal: string,
+        colorSecond: string,
+    }
 }
 
 export interface LooksColor {
@@ -16,15 +18,8 @@ export interface LooksColor {
     secondColor: string
 }
 
-export interface LooksColorSelector {
-    color: string,
-    secondColor: string
-    position: number
-    gender: number
-}
 
 export interface editCharacter {
-    avatar: InitialStateAvatar
     language: {
         selectors: string[];
         races: string[][];

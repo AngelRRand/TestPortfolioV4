@@ -1,30 +1,43 @@
 import React, {useState} from 'react'
 import Image from 'next/image';
+
+// Components
 import Selector from './Selector';
 import Avatar from '@/src/component/avatar/Avatar';
-import styles from './EditCharacter.module.scss';
+
+// Redux
 import {editCharacter} from "@/src/interface/avatar";
-import {setBase, setGender, setHair, setSelectColor, setSuit} from "@/src/redux/reducer/avatar";
-import {Dispatch} from "@/src/redux";
-import {useDispatch} from "react-redux";
+import {Dispatch, RootState} from "@/src/redux";
+import {useDispatch, useSelector} from "react-redux";
+import {setBase, setHair, setSelectColor, setSuit} from "@/src/redux/reducer/avatar";
+
+// Style
+import styles from './EditCharacter.module.scss';
 
 // Json
 import dataJson from "../../../../public/assets/create_character/data.json"
 import colorsJson from "../../../../public/assets/create_character/colors.json"
 import selectors from '../../../../public/assets/create_character/selectors.json'
+import SwitchGender from "@/src/app/Login/component/editCharacter/SwitchGender";
+import SpriteBox from "@/src/component/sprite/SpriteBox";
 
-const EditCharacter: React.FC<editCharacter> = ({avatar, language}) => {
+const EditCharacter: React.FC<editCharacter> = ({language}) => {
 
-    const [btnPress, setBtnPress] = useState("url(/assets/icon/create_character/btnFondoR.svg)")
+    const [show, setShow] = useState(true)
     const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
+
+    const avatar = useSelector((state: RootState) => state.avatar);
     const dispatch: Dispatch = useDispatch();
 
-    const {gender, base, hair, hairColor, suit, selectColor} = avatar
-
-    const switchGender = (url: string, gender: number) => {
-        dispatch(setGender(gender))
-        setBtnPress(url)
-    }
+    const {
+        gender,
+        base,
+        hair,
+        hairColor,
+        suit,
+        selectColor,
+        colors
+    } = avatar;
 
 
     return (
@@ -59,35 +72,36 @@ const EditCharacter: React.FC<editCharacter> = ({avatar, language}) => {
                         hair={hair}
                         suit={suit}
                         color={hairColor}
-                        colorPrincipal={colorsJson[selectColor].rgb}
-                        colorSecond={colorsJson[selectColor].rgb}
-                        showNationality={true}
                         flag={language.flag}
-                    />
-
-
-                    <div
-                        className={styles.options}
-                        style={{backgroundImage: btnPress}}
                     >
-                        <div onClick={() => switchGender("url(/assets/icon/create_character/btnFondoL.svg)", 0)}>
-                            <Image
-                                width={50}
-                                height={50}
-                                alt='circule'
-                                src="/assets/icon/create_character/btnMale.svg"
-                            />
-                        </div>
 
-                        <div onClick={() => switchGender("url(/assets/icon/create_character/btnFondoR.svg)", 1)}>
-                            <Image
-                                width={50}
-                                height={50}
-                                alt='circule'
-                                src="/assets/icon/create_character/btnGirl.svg"
-                            />
-                        </div>
-                    </div>
+                        {
+                            show ? (
+                                <>
+                                    <Image
+                                        width={50}
+                                        height={50}
+                                        alt='circule'
+                                        src={flag}
+                                        className={styles.flag}
+                                    />
+                                    <h2 onClick={() => setShow(!show)} className={styles.switch}>Switch</h2>
+                                    <article style={{opacity: show ? 1 : 0}}>
+                                        <SpriteBox
+                                            color={colors.colorPrincipal}
+                                            secondColor={colors.colorSecond}
+                                        />
+                                    </article>
+                                </>
+                            ) : (
+                                <></>
+                            )
+                        }
+
+                    </Avatar>
+
+                    <SwitchGender/>
+
                 </div>
             </section>
             <section>
@@ -105,9 +119,6 @@ const EditCharacter: React.FC<editCharacter> = ({avatar, language}) => {
                                                 hair={hair}
                                                 suit={suit}
                                                 color={hairColor}
-                                                colorPrincipal={colorsJson[selectColor].rgb}
-                                                colorSecond={colorsJson[selectColor].rgb}
-                                                showNationality={false}
                                                 flag={language.flag}
 
                                             />
@@ -127,9 +138,6 @@ const EditCharacter: React.FC<editCharacter> = ({avatar, language}) => {
                                                     hair={i}
                                                     suit={suit}
                                                     color={i}
-                                                    colorPrincipal={colorsJson[selectColor].rgb}
-                                                    colorSecond={colorsJson[selectColor].rgb}
-                                                    showNationality={false}
                                                     flag={language.flag}
 
                                                 />
@@ -147,9 +155,6 @@ const EditCharacter: React.FC<editCharacter> = ({avatar, language}) => {
                                                     hair={hair}
                                                     suit={i}
                                                     color={hairColor}
-                                                    colorPrincipal={colorsJson[selectColor].rgb}
-                                                    colorSecond={colorsJson[selectColor].rgb2}
-                                                    showNationality={false}
                                                     flag={language.flag}
 
                                                 />

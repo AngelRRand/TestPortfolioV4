@@ -4,6 +4,7 @@ import {Dispatch} from 'redux';
 import {soundEffect} from "@/src/helper";
 // import axios from 'axios';
 // import {RootState} from "@/src/redux";
+import colorsJson from "../../../../public/assets/create_character/colors.json"
 
 
 const initialState: InitialStateAvatar = {
@@ -14,9 +15,11 @@ const initialState: InitialStateAvatar = {
     hairColor: 0,
     selectColor: 0,
     suit: 0,
-    colorPrincipal: '',
-    colorSecond: '',
     flag: '',
+    colors: {
+        colorPrincipal: '',
+        colorSecond: '',
+    }
 };
 
 const mySlice = createSlice({
@@ -34,25 +37,18 @@ const mySlice = createSlice({
         },
         setHair: (state, action: PayloadAction<number>) => {
             state.hair = action.payload
-        },
-        setHairColor: (state, action: PayloadAction<number>) => {
             state.hairColor = action.payload
         },
         setSelectColor: (state, action: PayloadAction<number>) => {
             state.selectColor = action.payload
+            state.colors = {
+                colorPrincipal: colorsJson[action.payload].rgb,
+                colorSecond: colorsJson[action.payload].rgb2,
+            }
         },
         setSuit: (state, action: PayloadAction<number>) => {
             state.suit = action.payload
         },
-        setColorPrincipal: (state, action: PayloadAction<string>) => {
-            state.colorPrincipal = action.payload
-        },
-        setColorSecond: (state, action: PayloadAction<string>) => {
-            state.colorSecond = action.payload
-        },
-        setFlag: (state, action: PayloadAction<string>) => {
-            state.flag = action.payload
-        }
     },
 });
 
@@ -86,11 +82,6 @@ export const setHair = (hair: number) => {
         dispatch(myActions.setHair(hair))
     }
 }
-export const setHairColor = (color: number) => {
-    return async (dispatch: Dispatch) => {
-        dispatch(myActions.setHairColor(color))
-    }
-}
 
 export const setSelectColor = (color: number) => {
     return async (dispatch: Dispatch) => {
@@ -101,24 +92,6 @@ export const setSelectColor = (color: number) => {
 export const setSuit = (suit: number) => {
     return async (dispatch: Dispatch) => {
         dispatch(myActions.setSuit(suit))
-    }
-}
-
-export const setColorPrincipal = (color: string) => {
-    return async (dispatch: Dispatch) => {
-        dispatch(myActions.setColorPrincipal(color))
-    }
-}
-
-export const setColorSecond = (color: string) => {
-    return async (dispatch: Dispatch) => {
-        dispatch(myActions.setColorSecond(color))
-    }
-}
-
-export const setFlag = (flag: string) => {
-    return async (dispatch: Dispatch) => {
-        dispatch(myActions.setFlag(flag))
     }
 }
 
