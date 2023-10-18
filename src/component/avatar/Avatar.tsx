@@ -1,21 +1,19 @@
 import React from 'react'
 import styles from './Avatar.module.scss';
 import Image from 'next/image';
-import data from "../../../public/assets/create_character/data.json"
 import HumanColors from './hair/human/HumanColors';
 import CatColors from './hair/cat/CatColors';
 
+import {useSelector} from "react-redux";
+import {RootState} from "@/src/redux";
 
-const Avatar: React.FC<AvatarConfig> = ({
-                                            gender,
-                                            base,
-                                            hair,
-                                            suit,
-                                            color,
-                                        }) => {
+import data from "../../../public/assets/create_character/data.json"
+
+const Avatar: React.FC<AvatarConfig> = ({children, gender, base, hair, suit, color}) => {
 
 
     let raza = data[base]
+    const colors = useSelector((state: RootState) => state.avatar.colors);
 
 
     if (raza.name === "Human") {
@@ -38,8 +36,8 @@ const Avatar: React.FC<AvatarConfig> = ({
                     priority={true}
                 />
                 <HumanColors
-                    color={colorPrincipal}
-                    secondColor={colorSecond}
+                    color={colors.colorPrincipal}
+                    secondColor={colors.colorSecond}
                     position={color}
                     gender={gender}
                 />
@@ -56,6 +54,8 @@ const Avatar: React.FC<AvatarConfig> = ({
                             priority={true}
                         />
                 }
+
+                {children}
 
             </div>
         )
@@ -81,8 +81,8 @@ const Avatar: React.FC<AvatarConfig> = ({
 
 
                 <CatColors
-                    color={colorPrincipal}
-                    secondColor={colorSecond}
+                    color={colors.colorPrincipal}
+                    secondColor={colors.colorSecond}
                     position={color}
                     gender={gender}
                 />
@@ -99,6 +99,7 @@ const Avatar: React.FC<AvatarConfig> = ({
                             priority={true}
                         />
                 }
+                {children}
 
             </div>
         )

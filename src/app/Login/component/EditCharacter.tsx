@@ -23,8 +23,8 @@ import SpriteBox from "@/src/component/sprite/SpriteBox";
 
 const EditCharacter: React.FC<editCharacter> = ({language}) => {
 
-    const [show, setShow] = useState(true)
-    const [selectedButtonIndex, setSelectedButtonIndex] = useState(0);
+    const [show, setShow] = useState(false)
+    const [select, setSelect] = useState(0);
 
     const avatar = useSelector((state: RootState) => state.avatar);
     const dispatch: Dispatch = useDispatch();
@@ -57,8 +57,8 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                                 img={s.img}
                                 style={s.style}
                                 text={language.selectors[i]}
-                                isSelected={i === selectedButtonIndex}
-                                onSelect={() => setSelectedButtonIndex(i)}
+                                isSelected={i === select}
+                                onSelect={() => setSelect(i)}
                                 key={i}
 
                             />
@@ -72,27 +72,25 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                         hair={hair}
                         suit={suit}
                         color={hairColor}
-                        flag={language.flag}
                     >
 
+                        <h2 onClick={() => setShow(!show)} className={styles.switch}>S</h2>
+
+                        <Image
+                            width={50}
+                            height={50}
+                            alt='circule'
+                            src={language.flag}
+                            className={styles.flag}
+                        />
                         {
                             show ? (
-                                <>
-                                    <Image
-                                        width={50}
-                                        height={50}
-                                        alt='circule'
-                                        src={flag}
-                                        className={styles.flag}
+                                <article style={{opacity: show ? 1 : 0}}>
+                                    <SpriteBox
+                                        color={colors.colorPrincipal}
+                                        secondColor={colors.colorSecond}
                                     />
-                                    <h2 onClick={() => setShow(!show)} className={styles.switch}>Switch</h2>
-                                    <article style={{opacity: show ? 1 : 0}}>
-                                        <SpriteBox
-                                            color={colors.colorPrincipal}
-                                            secondColor={colors.colorSecond}
-                                        />
-                                    </article>
-                                </>
+                                </article>
                             ) : (
                                 <></>
                             )
@@ -105,10 +103,10 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                 </div>
             </section>
             <section>
-                <h1 className={styles.title}>{language.selectors[selectedButtonIndex]}</h1>
+                <h1 className={styles.title}>{language.selectors[select]}</h1>
                 <div>
                     {
-                        selectors[selectedButtonIndex].id === "base" ?
+                        selectors[select].id === "base" ?
                             (
                                 dataJson.map((o, i) => {
                                     return (
@@ -127,7 +125,7 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                                     )
                                 })
                             ) :
-                            selectors[selectedButtonIndex].id === "hair" ?
+                            selectors[select].id === "hair" ?
                                 (
                                     dataJson[base].gender[gender].hair.map((o, i) => {
                                         return (
@@ -145,7 +143,7 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                                             </article>
                                         )
                                     })
-                                ) : selectors[selectedButtonIndex].id === "suit" ? (
+                                ) : selectors[select].id === "suit" ? (
                                     dataJson[base].gender[gender].suit.map((o, i) => {
                                         return (
                                             <article key={i} onClick={() => dispatch(setSuit(i))}>
