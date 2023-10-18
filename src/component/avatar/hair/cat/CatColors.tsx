@@ -9,7 +9,6 @@ import HalfM from './male/Half'
 import HorizontalM from './male/Horizontal'
 import VerticalM from './male/Vertical'
 
-import { LooksColorSelector } from '@/src/interface';
 
 const CatColors: React.FC<LooksColorSelector> = ({ color, secondColor, position, gender }) => {
     let colorsMap: any = {}
