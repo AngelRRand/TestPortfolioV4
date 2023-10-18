@@ -7,9 +7,11 @@ import CatColors from './hair/cat/CatColors';
 import {useSelector} from "react-redux";
 import {RootState} from "@/src/redux";
 
+import {avatar} from "@/src/interface/avatar";
+
 import data from "../../../public/assets/create_character/data.json"
 
-const Avatar: React.FC<AvatarConfig> = ({children, gender, base, hair, suit, color}) => {
+const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit}) => {
 
 
     let raza = data[base]
@@ -38,7 +40,7 @@ const Avatar: React.FC<AvatarConfig> = ({children, gender, base, hair, suit, col
                 <HumanColors
                     color={colors.colorPrincipal}
                     secondColor={colors.colorSecond}
-                    position={color}
+                    position={hairColor}
                     gender={gender}
                 />
                 {
@@ -83,7 +85,7 @@ const Avatar: React.FC<AvatarConfig> = ({children, gender, base, hair, suit, col
                 <CatColors
                     color={colors.colorPrincipal}
                     secondColor={colors.colorSecond}
-                    position={color}
+                    position={hairColor}
                     gender={gender}
                 />
                 {

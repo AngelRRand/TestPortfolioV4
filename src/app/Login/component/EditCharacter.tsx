@@ -4,8 +4,10 @@ import Image from 'next/image';
 // Components
 import Selector from './Selector';
 import Avatar from '@/src/component/avatar/Avatar';
+import SwitchGender from "@/src/app/Login/component/editCharacter/SwitchGender";
+import SpriteBox from "@/src/component/sprite/SpriteBox";
 
-// Redux
+// Redux - Interface
 import {editCharacter} from "@/src/interface/avatar";
 import {Dispatch, RootState} from "@/src/redux";
 import {useDispatch, useSelector} from "react-redux";
@@ -18,8 +20,7 @@ import styles from './EditCharacter.module.scss';
 import dataJson from "../../../../public/assets/create_character/data.json"
 import colorsJson from "../../../../public/assets/create_character/colors.json"
 import selectors from '../../../../public/assets/create_character/selectors.json'
-import SwitchGender from "@/src/app/Login/component/editCharacter/SwitchGender";
-import SpriteBox from "@/src/component/sprite/SpriteBox";
+
 
 const EditCharacter: React.FC<editCharacter> = ({language}) => {
 
@@ -71,7 +72,7 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                         base={base}
                         hair={hair}
                         suit={suit}
-                        color={hairColor}
+                        hairColor={hairColor}
                     >
 
                         <h2 onClick={() => setShow(!show)} className={styles.switch}>S</h2>
@@ -116,8 +117,7 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                                                 base={i}
                                                 hair={hair}
                                                 suit={suit}
-                                                color={hairColor}
-                                                flag={language.flag}
+                                                hairColor={hairColor}
 
                                             />
                                             <h4 className={base === i ? styles.textShadowActive : styles.textShadowInactive}>{language.races[gender][i]}</h4>
@@ -135,8 +135,7 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                                                     base={base}
                                                     hair={i}
                                                     suit={suit}
-                                                    color={i}
-                                                    flag={language.flag}
+                                                    hairColor={i}
 
                                                 />
                                                 <h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{language.looks[i]}</h4>
@@ -152,9 +151,7 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                                                     base={base}
                                                     hair={hair}
                                                     suit={i}
-                                                    color={hairColor}
-                                                    flag={language.flag}
-
+                                                    hairColor={hairColor}
                                                 />
                                                 <h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{language.styles[i]}</h4>
                                             </article>

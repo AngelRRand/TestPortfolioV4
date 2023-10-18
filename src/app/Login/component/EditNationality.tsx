@@ -1,11 +1,16 @@
-import Image from 'next/image'
 import React from 'react'
-import styles from './EditNacionality.module.scss';
+import Image from 'next/image'
+
+// Redux - Interface
+import {editNacionality} from "@/src/interface/avatar";
 import {Dispatch} from '@/src/redux';
 import {useDispatch} from 'react-redux';
 import {setNationality} from "@/src/redux/reducer/avatar";
-import {editNacionality} from "@/src/interface/avatar";
 
+// Style
+import styles from './EditNacionality.module.scss';
+
+// Json
 import flags from '../../../../public/assets/create_character/flags.json'
 
 const EditNationality: React.FC<editNacionality> = ({nationality, language}) => {

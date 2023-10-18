@@ -33,16 +33,16 @@ export default function page() {
     useEffect(() => {
         switch (nationality) {
             case 0:
-                dispatch(setSelectColor(5))
+                dispatch(setSelectColor(2))
                 break
             case 1:
                 dispatch(setSelectColor(3))
                 break
             case 2:
-                dispatch(setSelectColor(7))
+                dispatch(setSelectColor(11))
                 break
             case 3:
-                dispatch(setSelectColor(2))
+                dispatch(setSelectColor(8))
                 break
         }
     }, [nationality])

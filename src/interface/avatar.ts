@@ -13,11 +13,14 @@ export interface InitialStateAvatar {
     }
 }
 
-export interface LooksColor {
-    color: string,
-    secondColor: string
+export interface avatar {
+    children?: React.ReactNode,
+    gender: number,
+    base: number,
+    hair: number,
+    hairColor: number,
+    suit: number,
 }
-
 
 export interface editCharacter {
     language: {
@@ -39,17 +42,6 @@ export interface editNacionality {
         himno: string;
         flag: string;
     };
-}
-
-
-export interface sprite {
-    position: position
-}
-
-export interface spriteHair {
-    position: position
-    color: string,
-    secondColor: string
 }
 
 interface position {
