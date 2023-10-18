@@ -37,7 +37,6 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
         hairColor,
         suit,
         selectColor,
-        colors
     } = avatar;
 
 
@@ -80,17 +79,14 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                         <Image
                             width={50}
                             height={50}
-                            alt='circule'
+                            alt='flag'
                             src={language.flag}
                             className={styles.flag}
                         />
                         {
                             show ? (
                                 <article style={{opacity: show ? 1 : 0}}>
-                                    <SpriteBox
-                                        color={colors.colorPrincipal}
-                                        secondColor={colors.colorSecond}
-                                    />
+                                    <SpriteBox/>
                                 </article>
                             ) : (
                                 <></>

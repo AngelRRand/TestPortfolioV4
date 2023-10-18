@@ -9,58 +9,57 @@ import ShortM from './male/ShortM'
 import BraidsM from './male/BraidsM'
 import CurlersM from './male/CurlersM'
 
-import { LooksColorSelector } from '@/src/interface';
+import {avatarHairMap} from "@/src/interface/avatar";
 
-const HumanColors: React.FC<LooksColorSelector> = ({ color, secondColor, position, gender }) => {
+const HumanColors: React.FC<avatarHairMap> = ({colors, hair, gender}) => {
     let colorsMap: any = {}
 
     if (gender === 1) {
         colorsMap = {
             0: <DegradedF
-                color={color}
-                secondColor={secondColor}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
             1: <ShortF
-                color={color}
-                secondColor={secondColor}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
             2: <LongF
-                color={color}
-                secondColor={secondColor}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
             3: <CurlersF
-                color={color}
-                secondColor={secondColor}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
         }
     } else {
         colorsMap = {
             0: <DegradedM
-                color={color}
-                secondColor={secondColor}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
             1: <ShortM
-                color={color}
-                secondColor={secondColor}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
             2: <BraidsM
-                color={color}
-                secondColor={secondColor}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
             3: <CurlersM
-                color={color}
-                secondColor={secondColor}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
         }
     }
 
     return (
         <>
-            {colorsMap[position]}
+            {colorsMap[hair]}
         </>
     )
 }
-
 
 
 export default HumanColors

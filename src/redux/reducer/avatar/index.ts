@@ -8,14 +8,13 @@ import colorsJson from "../../../../public/assets/create_character/colors.json"
 
 
 const initialState: InitialStateAvatar = {
-    nationality: 0,
     gender: 1,
     base: 0,
     hair: 0,
     hairColor: 0,
     selectColor: 0,
     suit: 0,
-    flag: '',
+    nationality: 0,
     colors: {
         colorPrincipal: '',
         colorSecond: '',
@@ -85,12 +84,16 @@ export const setHair = (hair: number) => {
 
 export const setSelectColor = (color: number) => {
     return async (dispatch: Dispatch) => {
+        soundEffect('/assets/sounds/btn.mp3')
+
         dispatch(myActions.setSelectColor(color))
     }
 }
 
 export const setSuit = (suit: number) => {
     return async (dispatch: Dispatch) => {
+        soundEffect('/assets/sounds/btn.mp3')
+
         dispatch(myActions.setSuit(suit))
     }
 }

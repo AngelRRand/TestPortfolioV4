@@ -1,37 +1,41 @@
-import React, { useState, useEffect } from 'react'
+import React, {useEffect, useState} from 'react'
 import Sprite from './Sprite'
 import styles from './Sprite.module.scss';
-import Hair from './Hair';
-import { LooksColor } from '@/src/interface';
-const SpriteBox: React.FC<LooksColor> = ({color, secondColor}) => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+import {useSelector} from "react-redux";
+import {RootState} from "@/src/redux";
+import HumanHairSprite from "@/src/component/sprite/hair/human/HumanHairSprite";
 
-  useEffect(() => {
-    const updatePosition = () => {
-      // Incrementa x en 16, si llega a 48, vuelve a 0
-      setPosition((prevPosition) => ({
-        ...prevPosition,
-        x: prevPosition.x === 96 ? 0 : prevPosition.x + 32,
-      }));
+const SpriteBox = () => {
 
-      // Llama a la función de actualización nuevamente después de 1000ms (1 segundo)
-      setTimeout(updatePosition, 200);
-    };
 
-    // Inicia la actualización inicialmente
-    updatePosition();
+    const [position, setPosition] = useState({x: 0, y: 0});
+    const avatar = useSelector((state: RootState) => state.avatar);
+    useEffect(() => {
+        const updatePosition = () => {
+            setPosition((prevPosition) => ({
+                ...prevPosition,
+                x: prevPosition.x === 96 ? 0 : prevPosition.x + 32,
+            }));
 
-    return () => {
-      // No es necesario limpiar el timeout ya que estamos utilizando setTimeout en lugar de setInterval
-    };
-  }, []); // [] asegura que este efecto se ejecute una vez al montar el componente
+            setTimeout(updatePosition, 200);
+        };
 
-  return (
-    <div className={styles.box}>
-      <Sprite position={position} />
-      <Hair position={position} color={color} secondColor={secondColor}/>
-    </div>
-  );
+        updatePosition();
+
+
+    }, []);
+
+    return (
+        <div className={styles.box}>
+            <Sprite position={position}/>
+            <HumanHairSprite
+                gender={avatar.gender}
+                hair={avatar.hair}
+                colors={avatar.colors}
+                position={position}
+            />
+        </div>
+    );
 }
 
 export default SpriteBox

@@ -38,9 +38,8 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                     priority={true}
                 />
                 <HumanColors
-                    color={colors.colorPrincipal}
-                    secondColor={colors.colorSecond}
-                    position={hairColor}
+                    colors={colors}
+                    hair={hairColor}
                     gender={gender}
                 />
                 {
@@ -83,9 +82,8 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
 
 
                 <CatColors
-                    color={colors.colorPrincipal}
-                    secondColor={colors.colorSecond}
-                    position={hairColor}
+                    color={colors}
+                    hair={hairColor}
                     gender={gender}
                 />
                 {
