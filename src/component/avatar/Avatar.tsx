@@ -19,7 +19,7 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
 
 
     if (raza.name === "Human") {
-        let newdata = raza.gender[gender]
+        let newData = raza.gender[gender]
 
         return (
             <div className={styles.container}>
@@ -27,14 +27,14 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                     width={400}
                     height={400}
                     alt='base'
-                    src={newdata.base}
+                    src={newData.base}
                     priority={true}
                 />
                 <Image
                     width={400}
                     height={400}
                     alt='hair'
-                    src={newdata.hair[hair].img}
+                    src={newData.hair[hair].img}
                     priority={true}
                 />
                 <HumanColors
@@ -44,7 +44,7 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                     gender={gender}
                 />
                 {
-                    newdata.suit[suit].img === "" ?
+                    newData.suit[suit].img === "" ?
                         <></>
                         :
 
@@ -52,7 +52,7 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                             width={400}
                             height={400}
                             alt='suit'
-                            src={newdata.suit[suit].img}
+                            src={newData.suit[suit].img}
                             priority={true}
                         />
                 }
@@ -62,14 +62,14 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
             </div>
         )
     } else {
-        let newdata = raza.gender[gender]
+        let newData = raza.gender[gender]
         return (
             <div className={styles.container}>
                 <Image
                     width={400}
                     height={400}
                     alt='base'
-                    src={newdata.base}
+                    src={newData.base}
                     priority={true}
                 />
 
@@ -77,7 +77,7 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                     width={400}
                     height={400}
                     alt='hair'
-                    src={newdata.hair[hair].img}
+                    src={newData.hair[hair].img}
                     priority={true}
                 />
 
@@ -89,7 +89,7 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                     gender={gender}
                 />
                 {
-                    newdata.suit[suit].img === "" ?
+                    newData.suit[suit].img === "" ?
                         <></>
                         :
 
@@ -97,7 +97,7 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                             width={400}
                             height={400}
                             alt='suit'
-                            src={newdata.suit[suit].img}
+                            src={newData.suit[suit].img}
                             priority={true}
                         />
                 }
