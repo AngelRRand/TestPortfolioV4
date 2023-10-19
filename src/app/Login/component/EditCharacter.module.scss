@@ -40,7 +40,6 @@
 
 
 		  .flag {
-			position: absolute;
 			height: 100%;
 			width: 100%;
 			top: -10px;
@@ -49,17 +48,16 @@
 		  }
 
 		  .switch {
-			display: flex;
 			position: absolute;
-			justify-content: center;
-			text-align: center;
-			background: white;
-			right: -0vw;
-			top: 20vw;
+			right: 7vw;
+			top: -5.5vw;
 			z-index: 200;
-			width: 3vw;
-			height: 3vw;
-			border-radius: 50%;
+			width: 5vw;
+			height: 5vw;
+			background-size: cover;
+			background-position: center;
+			background-color: transparent;
+
 		  }
 
 		  article {
@@ -69,9 +67,10 @@
 			position: absolute;
 			height: 100%;
 			width: 100%;
-			transition: 0.3s;
+			transition: 0.25s;
 			background-color: white;
 			z-index: 100;
+			color: #2c2c2c;
 		  }
 
 		}

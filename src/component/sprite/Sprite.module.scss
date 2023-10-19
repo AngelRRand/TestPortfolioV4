@@ -1,16 +1,16 @@
 .box {
-    width: 6vw;
-    height: 10vw;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    z-index: 100000;
+  width: 6vw;
+  height: 10vw;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  z-index: 100000;
 }
 
 .sprite {
-    width: 40vw;
-    height: 10vw;
-    z-index: 100000;
-    position: absolute;
-    left: -2vw;
+  width: 40.5vw;
+  height: 10vw;
+  z-index: 100000;
+  position: absolute;
+  left: -2vw;
 }

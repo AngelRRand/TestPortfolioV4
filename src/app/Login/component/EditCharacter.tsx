@@ -20,12 +20,15 @@ import styles from './EditCharacter.module.scss';
 import dataJson from "../../../../public/assets/create_character/data.json"
 import colorsJson from "../../../../public/assets/create_character/colors.json"
 import selectors from '../../../../public/assets/create_character/selectors.json'
+import {soundEffect} from "@/src/helper";
 
 
 const EditCharacter: React.FC<editCharacter> = ({language}) => {
 
+    let url = "url(/assets/icon/create_character/btnSwitchFondo.svg)"
     const [show, setShow] = useState(false)
     const [select, setSelect] = useState(0);
+    const [btnSwitch, setBtnSwitch] = useState(url)
 
     const avatar = useSelector((state: RootState) => state.avatar);
     const dispatch: Dispatch = useDispatch();
@@ -39,6 +42,15 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
         selectColor,
     } = avatar;
 
+    const handleSwich = () => {
+        soundEffect('/assets/sounds/btn.mp3')
+        if (!show) {
+            setBtnSwitch("url(/assets/icon/create_character/btnSwitchFondoActive.svg)")
+        } else {
+            setBtnSwitch("url(/assets/icon/create_character/btnSwitchFondo.svg)")
+        }
+        setShow(!show)
+    }
 
     return (
         <div className={styles.container}>
@@ -74,7 +86,17 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                         hairColor={hairColor}
                     >
 
-                        <h2 onClick={() => setShow(!show)} className={styles.switch}>S</h2>
+                        <div
+                            style={{backgroundImage: btnSwitch}}
+                            onClick={() => handleSwich()} className={styles.switch}
+                        >
+                            <Image
+                                src={'/assets/icon/create_character/btnSwitch.svg'}
+                                alt='switch'
+                                width={50}
+                                height={50}
+                            />
+                        </div>
 
                         <Image
                             width={50}
@@ -83,15 +105,9 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                             src={language.flag}
                             className={styles.flag}
                         />
-                        {
-                            show ? (
-                                <article style={{opacity: show ? 1 : 0}}>
-                                    <SpriteBox/>
-                                </article>
-                            ) : (
-                                <></>
-                            )
-                        }
+                        <article style={{opacity: show ? 1 : 0}}>
+                            <SpriteBox/>
+                        </article>
 
                     </Avatar>
 
