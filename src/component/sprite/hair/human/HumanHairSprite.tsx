@@ -1,39 +1,65 @@
 import React from "react";
-import Degraded from "@/src/component/sprite/hair/human/female/Degraded";
-import Short from "@/src/component/sprite/hair/human/female/Short";
-import Broad from "@/src/component/sprite/hair/human/female/Broad";
-import Curlers from "@/src/component/sprite/hair/human/female/Curlers";
+import DegradedF from "@/src/component/sprite/hair/human/female/Degraded";
+import ShortF from "@/src/component/sprite/hair/human/female/Short";
+import BroadF from "@/src/component/sprite/hair/human/female/Broad";
+import CurlersF from "@/src/component/sprite/hair/human/female/Curlers";
+
+import DegradedM from "@/src/component/sprite/hair/human/male/Degraded";
+import ShortM from "@/src/component/sprite/hair/human/male/Short";
+import BraidsM from "@/src/component/sprite/hair/human/male/Braids";
+import CurlersM from "@/src/component/sprite/hair/human/male/Curlers";
+
 import {spriteHairMap} from "@/src/interface/avatar";
 
 const HumanHairSprite: React.FC<spriteHairMap> = ({gender, hair, colors, position}) => {
 
+
     let colorsMap: any = {}
     if (gender === 1) {
 
-        colorsMap = {
-            0: <Degraded
-                position={position}
-                colorPrincipal={colors.colorPrincipal}
-                colorSecond={colors.colorSecond}
-            />,
-            1: <Short
-                position={position}
-                colorPrincipal={colors.colorPrincipal}
-                colorSecond={colors.colorSecond}
-            />,
-            2: <Broad
-                position={position}
-                colorPrincipal={colors.colorPrincipal}
-                colorSecond={colors.colorSecond}
-            />,
-            3: <Curlers
-                position={position}
-                colorPrincipal={colors.colorPrincipal}
-                colorSecond={colors.colorSecond}
-            />,
-        }
+        colorsMap =
+            [
+                <DegradedF
+                    position={position}
+                    colorPrincipal={colors.colorPrincipal}
+                    colorSecond={colors.colorSecond}
+                />,
+                <ShortF
+                    position={position}
+                    colorPrincipal={colors.colorPrincipal}
+                    colorSecond={colors.colorSecond}
+                />,
+                <BroadF
+                    position={position}
+                    colorPrincipal={colors.colorPrincipal}
+                    colorSecond={colors.colorSecond}
+                />,
+                <CurlersF
+                    position={position}
+                    colorPrincipal={colors.colorPrincipal}
+                    colorSecond={colors.colorSecond}
+                />
+            ]
+
     } else {
-        colorsMap = {}
+        colorsMap = [
+            <DegradedM
+                position={position}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}/>,
+            <ShortM
+                position={position}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}/>,
+            <BraidsM
+                position={position}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}/>,
+            <CurlersM
+                position={position}
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}/>,
+        ]
     }
 
     return (

@@ -3,6 +3,7 @@ import styles from '../../../Sprite.module.scss';
 import {spriteHair} from '@/src/interface/avatar'
 
 const Broad: React.FC<spriteHair> = ({position, colorPrincipal, colorSecond}) => {
+    console.log('asdasd')
     return (
         <svg version="1.1" className={styles.sprite} viewBox={`${position.x} ${position.y} 128 32`} fill="currentColor"
              xmlns="http://www.w3.org/2000/svg" shapeRendering="crispEdges">
