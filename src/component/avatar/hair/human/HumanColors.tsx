@@ -15,43 +15,43 @@ const HumanColors: React.FC<avatarHairMap> = ({colors, hair, gender}) => {
     let colorsMap: any = {}
 
     if (gender === 1) {
-        colorsMap = {
-            0: <DegradedF
+        colorsMap = [
+            <DegradedF
                 colorPrincipal={colors.colorPrincipal}
                 colorSecond={colors.colorSecond}
             />,
-            1: <ShortF
+            <ShortF
                 colorPrincipal={colors.colorPrincipal}
                 colorSecond={colors.colorSecond}
             />,
-            2: <LongF
+            <LongF
                 colorPrincipal={colors.colorPrincipal}
                 colorSecond={colors.colorSecond}
             />,
-            3: <CurlersF
+            <CurlersF
                 colorPrincipal={colors.colorPrincipal}
                 colorSecond={colors.colorSecond}
-            />,
-        }
+            />
+        ]
     } else {
-        colorsMap = {
-            0: <DegradedM
+        colorsMap = [
+            <DegradedM
                 colorPrincipal={colors.colorPrincipal}
                 colorSecond={colors.colorSecond}
             />,
-            1: <ShortM
+            <ShortM
                 colorPrincipal={colors.colorPrincipal}
                 colorSecond={colors.colorSecond}
             />,
-            2: <BraidsM
+            <BraidsM
                 colorPrincipal={colors.colorPrincipal}
                 colorSecond={colors.colorSecond}
             />,
-            3: <CurlersM
+            <CurlersM
                 colorPrincipal={colors.colorPrincipal}
                 colorSecond={colors.colorSecond}
             />,
-        }
+        ]
     }
 
     return (

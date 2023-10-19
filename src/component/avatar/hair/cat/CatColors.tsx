@@ -8,58 +8,58 @@ import StripesM from './male/Stripes'
 import HalfM from './male/Half'
 import HorizontalM from './male/Horizontal'
 import VerticalM from './male/Vertical'
+import {avatarHairMap} from "@/src/interface/avatar";
 
 
-const CatColors: React.FC<LooksColorSelector> = ({ color, secondColor, position, gender }) => {
+const CatColors: React.FC<avatarHairMap> = ({colors, hair, gender}) => {
     let colorsMap: any = {}
 
     if (gender === 1) {
-        colorsMap = {
-            0: <StripesF
-                color={color}
-                secondColor={secondColor}
+        colorsMap = [
+            <StripesF
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
-            1: <HalfF
-                color={color}
-                secondColor={secondColor}
+            <HalfF
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
-            2: <HorizontalF
-                color={color}
-                secondColor={secondColor}
+            <HorizontalF
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
-            3: <VerticalF
-                color={color}
-                secondColor={secondColor}
-            />,
-        }
+            <VerticalF
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
+            />
+        ]
     } else {
-        colorsMap = {
-            0: <StripesM
-                color={color}
-                secondColor={secondColor}
+        colorsMap = [
+            <StripesM
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
-            1: <HalfM
-                color={color}
-                secondColor={secondColor}
+            <HalfM
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
-            2: <HorizontalM
-                color={color}
-                secondColor={secondColor}
+            <HorizontalM
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
             />,
-            3: <VerticalM
-                color={color}
-                secondColor={secondColor}
-            />,
-        }
+            <VerticalM
+                colorPrincipal={colors.colorPrincipal}
+                colorSecond={colors.colorSecond}
+            />
+        ]
     }
 
     return (
         <>
-            {colorsMap[position]}
+            {colorsMap[hair]}
         </>
     )
 }
-
 
 
 export default CatColors

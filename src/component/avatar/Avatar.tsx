@@ -82,7 +82,7 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
 
 
                 <CatColors
-                    color={colors}
+                    colors={colors}
                     hair={hairColor}
                     gender={gender}
                 />
