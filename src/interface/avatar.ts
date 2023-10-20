@@ -62,7 +62,7 @@ export interface spriteHair {
     colorSecond: string;
 }
 
-interface position {
+export interface position {
     x: number
     y: number
 }

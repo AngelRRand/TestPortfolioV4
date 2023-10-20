@@ -12,7 +12,8 @@ import CurlersM from './male/CurlersM'
 import {avatarHairMap} from "@/src/interface/avatar";
 
 const HumanColors: React.FC<avatarHairMap> = ({colors, hair, gender}) => {
-    let colorsMap: any = {}
+
+    let colorsMap: any = []
 
     if (gender === 1) {
         colorsMap = [

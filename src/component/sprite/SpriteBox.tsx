@@ -27,7 +27,7 @@ const SpriteBox = () => {
 
     return (
         <div className={styles.box}>
-            <Sprite position={position}/>
+            <Sprite x={position.x} y={position.y}/>
             <HumanHairSprite
                 gender={avatar.gender}
                 hair={avatar.hair}

@@ -14,7 +14,7 @@ import {spriteHairMap} from "@/src/interface/avatar";
 const HumanHairSprite: React.FC<spriteHairMap> = ({gender, hair, colors, position}) => {
 
 
-    let colorsMap: any = {}
+    let colorsMap: any = []
     if (gender === 1) {
 
         colorsMap =
