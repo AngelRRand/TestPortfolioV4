@@ -42,6 +42,8 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
         selectColor,
     } = avatar;
 
+    console.log(base)
+
     const handleSwich = () => {
         soundEffect('/assets/sounds/btn.mp3')
         if (!show) {
