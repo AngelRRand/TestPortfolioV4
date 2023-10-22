@@ -4,7 +4,7 @@ import {Dispatch} from 'redux';
 import {soundEffect} from "@/src/helper";
 // import axios from 'axios';
 // import {RootState} from "@/src/redux";
-import colorsJson from "../../../../public/assets/create_character/colors.json"
+import colorsJson from "../../../../colors.json"
 
 
 const initialState: InitialStateAvatar = {

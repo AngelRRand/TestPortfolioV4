@@ -11,7 +11,7 @@ import {setNationality} from "@/src/redux/reducer/avatar";
 import styles from './EditNacionality.module.scss';
 
 // Json
-import flags from '../../../../public/assets/create_character/flags.json'
+import flags from '../../../../flags.json'
 
 const EditNationality: React.FC<editNacionality> = ({nationality, language}) => {
 

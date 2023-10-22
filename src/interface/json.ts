@@ -89,3 +89,11 @@ declare module '@create_character/language.json' {
 
     export default language;
 }
+
+declare module '@create_character/flags.json' {
+
+
+    const language: string[];
+
+    export default language;
+}

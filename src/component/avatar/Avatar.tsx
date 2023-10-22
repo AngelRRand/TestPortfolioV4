@@ -9,7 +9,7 @@ import {RootState} from "@/src/redux";
 
 import {avatar} from "@/src/interface/avatar";
 
-import data from "../../../public/assets/create_character/data.json"
+import data from "../../../data.json"
 
 const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit}) => {
 

@@ -17,9 +17,9 @@ import {setBase, setHair, setSelectColor, setSuit} from "@/src/redux/reducer/ava
 import styles from './EditCharacter.module.scss';
 
 // Json
-import dataJson from '@create_character/data.json'
-import colorsJson from "@create_character/colors.json"
-import selectors from '@create_character/selectors.json'
+import dataJson from '../../../../data.json'
+import colorsJson from "../../../../colors.json"
+import selectors from '../../../../selectors.json'
 import {soundEffect} from "@/src/helper";
 
 
