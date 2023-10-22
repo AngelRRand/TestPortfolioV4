@@ -17,13 +17,15 @@ import {setBase, setHair, setSelectColor, setSuit} from "@/src/redux/reducer/ava
 import styles from './EditCharacter.module.scss';
 
 // Json
-import dataJson from "../../../../public/assets/create_character/data.json"
-import colorsJson from "../../../../public/assets/create_character/colors.json"
-import selectors from '../../../../public/assets/create_character/selectors.json'
+import dataJson from '@create_character/data.json'
+import colorsJson from "@create_character/colors.json"
+import selectors from '@create_character/selectors.json'
 import {soundEffect} from "@/src/helper";
 
 
 const EditCharacter: React.FC<editCharacter> = ({language}) => {
+
+    console.log(dataJson)
 
     let url = "url(/assets/icon/create_character/btnSwitchFondo.svg)"
     const [show, setShow] = useState(false)

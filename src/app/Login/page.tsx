@@ -8,7 +8,8 @@ import {soundEffect} from "@/src/helper";
 import {Dispatch, RootState} from "@/src/redux";
 import {useDispatch, useSelector} from "react-redux";
 import {setSelectColor} from "@/src/redux/reducer/avatar";
-import language from "../../../public/assets/create_character/language.json";
+
+import language from "@create_character/language.json";
 import styles from './Login.module.scss';
 
 
