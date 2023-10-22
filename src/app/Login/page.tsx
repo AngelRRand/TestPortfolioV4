@@ -48,6 +48,7 @@ export default function page() {
     }
     // sada
     return (
+
         <main className={styles.container}>
             <Stars/>
             <section className={styles.navegation}>
