@@ -1,0 +1,26 @@
+[
+  {
+    "img": "/assets/icon/create_character/btnAdn.svg",
+    "style": "top",
+    "text": "races",
+    "id": "base"
+  },
+  {
+    "img": "/assets/icon/create_character/btnPelo.svg",
+    "style": "mid",
+    "text": "looks",
+    "id": "hair"
+  },
+  {
+    "img": "/assets/icon/create_character/btnTraje.svg",
+    "style": "bottom",
+    "text": "styles",
+    "id": "suit"
+  },
+  {
+    "img": "/assets/icon/create_character/btnColors.svg",
+    "style": "footer",
+    "text": "colors",
+    "id": "color"
+  }
+]

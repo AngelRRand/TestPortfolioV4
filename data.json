@@ -1,0 +1,217 @@
+[
+    {
+        "name": "Human",
+        "gender": [
+            {
+                "base": "/assets/create_character/svg/human/male/base.svg",
+                "hair": [
+                    {
+                        "name": "degraded",
+                        "img": "/assets/create_character/svg/human/male/cabello2.svg",
+                        "color": "/assets/create_character/svg/human/male/color2.svg"
+                    },
+                    {
+                        "name": "short",
+                        "img": "/assets/create_character/svg/human/male/cabello1.svg",
+                        "color": "/assets/create_character/svg/human/male/color1.svg"
+                    },
+                    {
+                        "name": "long",
+                        "img": "/assets/create_character/svg/human/male/cabello3.svg",
+                        "color": "/assets/create_character/svg/human/male/color3.svg"
+                    },
+                    {
+                        "name": "long",
+                        "img": "/assets/create_character/svg/human/male/cabello4.svg",
+                        "color": "/assets/create_character/svg/human/male/color4.svg"
+                    }
+                ],
+                "suit": [
+                    {
+                        "name": "basic",
+                        "img": ""
+                    },
+                    {
+                        "name": "basic",
+                        "img": "/assets/create_character/svg/human/male/accesorio1.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/human/male/accesorio2.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/human/male/accesorio3.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/human/male/accesorio4.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/human/male/accesorio5.svg"
+                    }
+                ]
+            },
+            {
+                "base": "/assets/create_character/svg/human/female/base.svg",
+                "hair": [
+                    {
+                        "name": "degraded",
+                        "img": "/assets/create_character/svg/human/female/cabello1.svg",
+                        "color": "/assets/create_character/svg/human/female/color1.svg"
+                    },
+                    {
+                        "name": "short",
+                        "img": "/assets/create_character/svg/human/female/cabello2.svg",
+                        "color": "/assets/create_character/svg/human/female/color2.svg"
+                    },
+                    {
+                        "name": "long",
+                        "img": "/assets/create_character/svg/human/female/cabello3.svg",
+                        "color": "/assets/create_character/svg/human/female/color3.svg"
+                    },
+                    {
+                        "name": "long",
+                        "img": "/assets/create_character/svg/human/female/cabello4.svg",
+                        "color": "/assets/create_character/svg/human/female/color4.svg"
+                    }
+                ],
+                "suit": [
+                    {
+                        "name": "basic",
+                        "img": ""
+                    },
+                    {
+                        "name": "basic",
+                        "img": "/assets/create_character/svg/human/female/accesorio1.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/human/female/accesorio2.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/human/female/accesorio3.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/human/female/accesorio4.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/human/female/accesorio5.svg"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Cat",
+        "gender": [
+            {
+                "base": "/assets/create_character//svg/cat/male/base.svg",
+                "hair": [
+                    {
+                        "name": "degraded",
+                        "img": "/assets/create_character/svg/cat/male/cabello1.svg",
+                        "color": "/assets/create_character/svg/cat/male/color1.svg"
+                    },
+                    {
+                        "name": "short",
+                        "img": "/assets/create_character/svg/cat/male/cabello2.svg",
+                        "color": "/assets/create_character/svg/cat/male/color2.svg"
+                    },
+                    {
+                        "name": "long",
+                        "img": "/assets/create_character/svg/cat/male/cabello3.svg",
+                        "color": "/assets/create_character/svg/cat/male/color3.svg"
+                    },
+                    {
+                        "name": "long",
+                        "img": "/assets/create_character/svg/cat/male/cabello4.svg",
+                        "color": "/assets/create_character/svg/cat/male/color4.svg"
+                    }
+                ],
+                "suit": [
+                    {
+                        "name": "basic",
+                        "img": ""
+                    },
+                    {
+                        "name": "basic",
+                        "img": "/assets/create_character/svg/cat/male/accesorio1.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/cat/male/accesorio2.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/cat/male/accesorio3.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/cat/male/accesorio5.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/cat/male/accesorio4.svg"
+                    }
+                ]
+            },
+            {
+                "base": "/assets/create_character//svg/cat/female/base.svg",
+                "hair": [
+                    {
+                        "name": "degraded",
+                        "img": "/assets/create_character/svg/cat/female/cabello1.svg",
+                        "color": "/assets/create_character/svg/cat/female/color1.svg"
+                    },
+                    {
+                        "name": "short",
+                        "img": "/assets/create_character/svg/cat/female/cabello2.svg",
+                        "color": "/assets/create_character/svg/cat/female/color2.svg"
+                    },
+                    {
+                        "name": "long",
+                        "img": "/assets/create_character/svg/cat/female/cabello3.svg",
+                        "color": "/assets/create_character/svg/cat/female/color3.svg"
+                    },
+                    {
+                        "name": "long",
+                        "img": "/assets/create_character/svg/cat/female/cabello4.svg",
+                        "color": "/assets/create_character/svg/cat/female/color4.svg"
+                    }
+                ],
+                "suit": [
+                    {
+                        "name": "basic",
+                        "img": ""
+                    },
+                    {
+                        "name": "basic",
+                        "img": "/assets/create_character/svg/cat/female/accesorio1.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/cat/female/accesorio2.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/cat/female/accesorio3.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/cat/female/accesorio4.svg"
+                    },
+                    {
+                        "name": "flowers",
+                        "img": "/assets/create_character/svg/cat/female/accesorio5.svg"
+                    }
+                ]
+            }
+        ]
+    }
+    
+]

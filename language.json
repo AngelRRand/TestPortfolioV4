@@ -1,0 +1,214 @@
+[
+  {
+    "name": "United State",
+    "login": {
+      "base": {
+        "nationality": "nationality",
+        "edit": "Edit",
+        "resume": "Resume"
+      },
+      "nationality": {
+        "name": "United State",
+        "text_presentation": "Welcome to my portfolio! It's going to be a long journey, so let's create your character. Let's start by picking a nationality. It could either be your country of birth or your favorite one from the following options. Please note that once you pick a nationality, the entire website will be switched to that country's language.",
+        "phrase": {
+          "text": "We are not native to this place. We are native to the universe.",
+          "author": "Ray Bradbury"
+        },
+        "himno": "/assets/create_character/nationality/himno/himnoUsa.mp3",
+        "flag": "/assets/create_character/nationality/flag/usa.gif"
+      },
+      "edit": {
+        "selectors": [
+          "Races",
+          "Looks",
+          "Styles",
+          "Colors"
+        ],
+        "races": [
+          [
+            "Human",
+            "Cat"
+          ],
+          [
+            "Human",
+            "Cat"
+          ]
+        ],
+        "looks": [
+          "Degraded",
+          "Short",
+          "Braids",
+          "Curlers"
+        ],
+        "styles": [
+          "None",
+          "Glasses 1",
+          "Glasses 2",
+          "Glasses 3",
+          "Glasses 4",
+          "Scar"
+        ],
+        "flag": "/assets/create_character/nationality/flagCharacter/flagCharacterUSA.svg"
+      }
+    }
+  },
+  {
+    "name": "Argentina",
+    "login": {
+      "base": {
+        "nationality": "Nacionalidad",
+        "edit": "Editar",
+        "resume": "Resumen"
+      },
+      "nationality": {
+        "name": "Argentina",
+        "text_presentation": "¡Che bienvenido a mi portafolio! Será un alto viaje, así que crearemos a tu wachin. ¿podés seleccionar tu nacionalidad? Ya sea la de tu país de nacimiento o la que más te cope. Si lo hacés, toda la web se va a ver en ese idioma, ¡dale!",
+        "phrase": {
+          "text": "Uno está enamorado cuando se da cuenta de que otra persona es única.",
+          "author": "Jose Luis Borges"
+        },
+        "himno": "/assets/create_character/nationality/himno/himnoArgentina.mp3",
+        "flag": "/assets/create_character/nationality/flag/argentina.gif"
+      },
+      "edit": {
+        "selectors": [
+          "Raza",
+          "Melena",
+          "Facha",
+          "Colores"
+        ],
+        "races": [
+          [
+            "Pibe",
+            "Michi"
+          ],
+          [
+            "Piba",
+            "Michi"
+          ]
+        ],
+        "looks": [
+          "Degradado",
+          "Corto",
+          "Trenzas",
+          "Rulos"
+        ],
+        "styles": [
+          "Ninguno",
+          "Gafas 1",
+          "Gafas 2",
+          "Gafas 3",
+          "Gafas 4",
+          "Cicatriz"
+        ],
+        "flag": "/assets/create_character/nationality/flagCharacter/flagCharacterARG.svg"
+      }
+    }
+  },
+  {
+    "name": "Brasil",
+    "login": {
+      "base": {
+        "nationality": "Nacionalidade",
+        "edit": "Editar",
+        "resume": "resumo"
+      },
+      "nationality": {
+        "name": "Brasil",
+        "text_presentation": "Bem-vindo ao meu portfólio! Será uma longa jornada, então vamos criar o teu personaje. Depois, oi, tudo bem? Escolhe a tua nacionalidade, pode ser a do teu país de origem ou a que tu gostas mais. Ao fazer isso, todo o site vai mudar pro idioma escolhido, tá legal?",
+        "phrase": {
+          "text": "Uma coisa é você ACHAR que está no caminho certo, outra é ACHAR que seu caminho é o único!",
+          "author": "Paulo Coelho"
+        },
+        "himno": "/assets/create_character/nationality/himno/himnoBrasil.mp3",
+        "flag": "/assets/create_character/nationality/flag/brasil.gif"
+      },
+      "edit": {
+        "selectors": [
+          "Raza",
+          "Triturando",
+          "Pegada",
+          "Cores"
+        ],
+        "races": [
+          [
+            "Humano",
+            "Gato"
+          ],
+          [
+            "Humano",
+            "Gato"
+          ]
+        ],
+        "looks": [
+          "Degradê",
+          "Curto",
+          "Tranças",
+          "Rodelas"
+        ],
+        "styles": [
+          "Nenhum",
+          "Óculos 1",
+          "Óculos 2",
+          "Óculos 3",
+          "Óculos 4",
+          "Cicatriz"
+        ],
+        "flag": "/assets/create_character/nationality/flagCharacter/flagCharacterBR.svg"
+      }
+    }
+  },
+  {
+    "name": "España",
+    "login": {
+      "base": {
+        "nationality": "Nacionalidad",
+        "edit": "Editar",
+        "resume": "Resumen"
+      },
+      "nationality": {
+        "name": "España",
+        "text_presentation": "¡Eh, tío bienvenido a mi portafolio! Será una larga aventura, así que vamos a crear tu personaje. Selecciona tu nacionalidad, ya sea de tu país de origen o la que te mole más. Si lo haces, la web entera cambiará a ese idioma y jerga, ¡venga!",
+        "phrase": {
+          "text": "El que lee mucho y anda mucho, ve mucho y sabe mucho.",
+          "author": "Miguel de Cervantes"
+        },
+        "himno": "/assets/create_character/nationality/himno/himnoSpain.mp3",
+        "flag": "/assets/create_character/nationality/flag/spain.gif"
+      },
+      "edit": {
+        "selectors": [
+          "Raza",
+          "Pinta",
+          "Rollo",
+          "Colores"
+        ],
+        "races": [
+          [
+            "Chaval",
+            "Gato"
+          ],
+          [
+            "Chavala",
+            "Gata"
+          ]
+        ],
+        "looks": [
+          "Degradado",
+          "Corto",
+          "Trenzas",
+          "Rizos"
+        ],
+        "styles": [
+          "Ninguno",
+          "Gafas 1",
+          "Gafas 2",
+          "Gafas 3",
+          "Gafas 4",
+          "Cicatriz"
+        ],
+        "flag": "/assets/create_character/nationality/flagCharacter/flagCharacterES.svg"
+      }
+    }
+  }
+]
