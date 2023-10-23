@@ -1,98 +1,99 @@
 .container {
-    display: flex;
-    width: 100vw;
-    height: 85vh;
-    margin-bottom: 5vh;
+  display: flex;
+  width: 100vw;
+  height: 85vh;
+  margin-bottom: 5vh;
 
-    section {
+  section {
 
-        &:nth-of-type(1) {
-            width: 50%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
+	&:nth-of-type(1) {
+	  width: 50%;
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  position: relative;
 
-            img {
-                &:nth-of-type(1) {
-                    position: absolute;
-                }
+	  img {
+		&:nth-of-type(1) {
+		  position: absolute;
+		}
 
-                &:nth-of-type(2) {
-                    position: absolute;
-                }
-            }
+		&:nth-of-type(2) {
+		  position: absolute;
+		}
+	  }
 
-            p {
-                background-image: url("/assets/icon/create_character/btnFondo.svg");
-                background-size: cover;
-                background-position: center;
-                background-color: transparent;
-                z-index: 1000;
-                color: rgb(0, 0, 0);
-                position: absolute;
-                bottom: -5vh;
-                font-size: 2rem;
-                width: 25vw;
-                height: 8vh;
-                text-align: center;
-            }
-        }
+	  p {
+		background-image: url("public/assets/icon/create_character/btnFondo.svg");
+		background-size: cover;
+		background-position: center;
+		background-color: transparent;
+		z-index: 1000;
+		color: rgb(0, 0, 0);
+		position: absolute;
+		bottom: -5vh;
+		font-size: 2rem;
+		width: 25vw;
+		height: 8vh;
+		text-align: center;
+	  }
+	}
 
-        &:nth-of-type(2) {
-            width: 50%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            z-index: 100;
-            color: white;
+	&:nth-of-type(2) {
+	  width: 50%;
+	  height: 100%;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  flex-direction: column;
+	  z-index: 100;
+	  color: white;
 
-            article {
-                position: relative;
-                text-align: center;
-                width: 25vw;
-                height: 75vh;
-                border: 4px solid white;
-                background-color: rgb(9, 10, 19);
-                padding: 10px;
-                
-                > p {
-                    color: white;
-                }
-                .select {
-                    position: absolute;
-                    left: -5vw;
-                    top: 10%;
-                    background-color: green;
+	  article {
+		position: relative;
+		text-align: center;
+		width: 25vw;
+		height: 75vh;
+		border: 4px solid white;
+		background-color: rgb(9, 10, 19);
+		padding: 10px;
 
-                    img {
-                        position: absolute;
-                    }
+		> p {
+		  color: white;
+		}
 
-                    .flag {
-                        width: 45px;
-                        height: 45px;
-                        position: absolute;
+		.select {
+		  position: absolute;
+		  left: -5vw;
+		  top: 10%;
+		  background-color: green;
 
-                        img {
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                        }
-                    }
+		  img {
+			position: absolute;
+		  }
 
-                }
-            }
+		  .flag {
+			width: 45px;
+			height: 45px;
+			position: absolute;
 
-            input {
-                width: 25vw;
-                font-size: 2rem;
-                border-bottom: 3px solid white;
+			img {
+			  position: absolute;
+			  bottom: 0;
+			  left: 0;
+			}
+		  }
 
-            }
-        }
-    }
+		}
+	  }
+
+	  input {
+		width: 25vw;
+		font-size: 2rem;
+		border-bottom: 3px solid white;
+
+	  }
+	}
+  }
 }
