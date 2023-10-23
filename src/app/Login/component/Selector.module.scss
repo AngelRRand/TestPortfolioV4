@@ -1,50 +1,50 @@
 .btn {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    padding: 0;
-    background-image: url("/assets/icon/create_character/btnFondo.svg");
-    background-size: cover;
-    background-position: center;
-    background-color: transparent;
-    border: none;
-    right: -2.4vw;
-    min-width: 12vw;
-    
-    span {
-        text-align: center;
-        font-size: 1.5rem;
-    }
+  display: flex;
+  align-items: center;
+  position: absolute;
+  padding: 0;
+  background-image: url("../../../img/btnfondo.svg");
+  background-size: cover;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  right: -2.4vw;
+  min-width: 12vw;
 
-    img {
-        &:nth-of-type(1) {
-            z-index: 100;
-        }
+  span {
+	text-align: center;
+	font-size: 1.5rem;
+  }
 
-        &:nth-of-type(2) {
-            z-index: 1;
-            position: absolute;
-            right: -5vw;
-            transition: 0.1s all ease;
-        }
-    }
+  img {
+	&:nth-of-type(1) {
+	  z-index: 100;
+	}
+
+	&:nth-of-type(2) {
+	  z-index: 1;
+	  position: absolute;
+	  right: -5vw;
+	  transition: 0.1s all ease;
+	}
+  }
 }
 
 
 .top {
-    right: -0.5vw;
-    top: 20%;
+  right: -0.5vw;
+  top: 20%;
 }
 
 .mid {
-    top: 37%;
+  top: 37%;
 }
 
 .bottom {
-    top: 54%;
+  top: 54%;
 }
 
 .footer {
-    right: -0.5vw;
-    top: 70%;
+  right: -0.5vw;
+  top: 70%;
 }
