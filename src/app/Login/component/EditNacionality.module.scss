@@ -27,7 +27,7 @@
 		img {
 		  position: relative;
 		  bottom: 0;
-		  transform: rotate(-35deg);
+		  transform: rotate(-30deg);
 		}
 	  }
 
@@ -44,6 +44,7 @@
 		width: 25vw;
 		height: 8vh;
 		text-align: center;
+		user-select: none;
 	  }
 	}
 
@@ -68,6 +69,7 @@
 
 		> p {
 		  color: white;
+		  user-select: none;
 		}
 
 		.select {

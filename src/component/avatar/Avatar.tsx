@@ -28,14 +28,12 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                     height={400}
                     alt='base'
                     src={newData.base}
-                    priority={true}
                 />
                 <Image
                     width={400}
                     height={400}
                     alt='hair'
                     src={newData.hair[hair].img}
-                    priority={true}
                 />
                 <HumanColors
                     colors={colors}
@@ -69,7 +67,6 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                     height={400}
                     alt='base'
                     src={newData.base}
-                    priority={true}
                 />
 
                 <Image
@@ -77,7 +74,6 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                     height={400}
                     alt='hair'
                     src={newData.hair[hair].img}
-                    priority={true}
                 />
 
 
@@ -96,7 +92,6 @@ const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit
                             height={400}
                             alt='suit'
                             src={newData.suit[suit].img}
-                            priority={true}
                         />
                 }
                 {children}
