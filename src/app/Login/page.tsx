@@ -48,9 +48,18 @@ export default function page() {
         <main className={styles.container}>
             <Stars/>
             <section className={styles.navegation}>
-                <h1 onClick={() => selectSection('identity')}>{login.base.nationality}</h1>
-                <h1 onClick={() => selectSection('edit')}>{login.base.edit}</h1>
-                <h1 onClick={() => selectSection('resume')}>{login.base.resume}</h1>
+                <h1
+                    className={section === 'identity' ? styles.textShadowActive : styles.textShadowInactive}
+                    onClick={() => selectSection('identity')}
+                >{login.base.nationality}</h1>
+                <h1
+                    className={section === 'edit' ? styles.textShadowActive : styles.textShadowInactive}
+                    onClick={() => selectSection('edit')}
+                >{login.base.edit}</h1>
+                <h1
+                    className={section === 'resume' ? styles.textShadowActive : styles.textShadowInactive}
+                    onClick={() => selectSection('resume')}
+                >{login.base.resume}</h1>
             </section>
 
             <div className={styles.containerMain}>
