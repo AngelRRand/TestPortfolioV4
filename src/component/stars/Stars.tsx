@@ -4,6 +4,7 @@ import styles from './Stars.module.scss';
 
 export default function Stars() {
   return (
+
     <Image
       width={100}
       height={100}

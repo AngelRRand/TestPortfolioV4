@@ -14,25 +14,32 @@
 	  justify-content: center;
 	  position: relative;
 
-	  img {
-		&:nth-of-type(1) {
-		  position: absolute;
-		}
+	  article {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		outline: 4px solid white;
+		border: 7px solid var(--streak);
+		width: 20vw;
+		height: 20vw;
+		background-color: white;
 
-		&:nth-of-type(2) {
-		  position: absolute;
+		img {
+		  position: relative;
+		  bottom: 0;
+		  transform: rotate(-35deg);
 		}
 	  }
 
+
+
 	  p {
-		background-image: url("../../../img/btnfondo.svg");
-		background-size: cover;
-		background-position: center;
-		background-color: transparent;
+		background: white;
+		border: 4px solid var(--streak);
 		z-index: 1000;
 		color: rgb(0, 0, 0);
 		position: absolute;
-		bottom: -5vh;
+		bottom: 10vh;
 		font-size: 2rem;
 		width: 25vw;
 		height: 8vh;

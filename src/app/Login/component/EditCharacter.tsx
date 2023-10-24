@@ -54,6 +54,8 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
         setShow(!show)
     }
 
+    console.log(gender)
+
     return (
         <div className={styles.container}>
             <section>

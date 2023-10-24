@@ -20,21 +20,17 @@ const EditNationality: React.FC<editNacionality> = ({nationality, language}) => 
     return (
         <div className={styles.container}>
             <section>
-                <Image
-                    width={450}
-                    height={450}
-                    alt='circle'
-                    src="/assets/circleSmall.svg"
-                    priority
-                />
-                <Image
-                    width={450}
-                    height={450}
-                    alt='flag'
-                    src={language.flag}
-                    priority
-                    className={styles.flag}
-                />
+                <article>
+                    <Image
+                        width={450}
+                        height={450}
+                        alt='flag'
+                        src={language.flag}
+                        priority
+                        className={styles.flag}
+                    />
+                </article>
+
                 <p className={styles.name}>{language.name}</p>
             </section>
             <section>
