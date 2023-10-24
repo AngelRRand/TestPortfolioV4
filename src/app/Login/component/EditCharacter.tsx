@@ -25,7 +25,6 @@ import {soundEffect} from "@/src/helper";
 
 const EditCharacter: React.FC<editCharacter> = ({language}) => {
 
-    console.log(dataJson)
 
     let url = "url(/assets/icon/create_character/btnSwitchFondo.svg)"
     const [show, setShow] = useState(false)
@@ -44,7 +43,6 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
         selectColor,
     } = avatar;
 
-    console.log(base)
 
     const handleSwich = () => {
         soundEffect('/assets/sounds/btn.mp3')
@@ -60,13 +58,6 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
         <div className={styles.container}>
             <section>
                 <div>
-                    <Image
-                        width={450}
-                        height={450}
-                        alt='circule'
-                        src="/assets/cicle.svg"
-                        priority
-                    />
                     {
                         selectors.map((s, i) => (
                             <Selector
@@ -102,23 +93,21 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                             />
                         </div>
 
-                        <Image
-                            width={50}
-                            height={50}
-                            alt='flag'
-                            src={language.flag}
-                            className={styles.flag}
+                        <SwitchGender
+                            gender={gender}
                         />
+
                         <article style={{opacity: show ? 1 : 0}}>
                             <SpriteBox/>
                         </article>
 
                     </Avatar>
 
-                    <SwitchGender/>
 
                 </div>
             </section>
+
+
             <section>
                 <h1 className={styles.title}>{language.selectors[select]}</h1>
                 <div>
