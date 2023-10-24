@@ -74,22 +74,35 @@
 		  position: absolute;
 		  left: -5vw;
 		  top: 10%;
-		  background-color: green;
 
 		  img {
 			position: absolute;
 		  }
 
+
+
 		  .flag {
 			width: 45px;
 			height: 45px;
 			position: absolute;
+			transition: 0.1s ease all;
+			cursor: pointer;
 
 			img {
 			  position: absolute;
 			  bottom: 0;
 			  left: 0;
 			}
+
+
+		  }
+
+		  .flag:hover {
+			background-image: url("../../../img/btnFlagActive.svg");
+			background-size: cover;
+			background-position: center;
+			background-color: transparent;
+			transform: scale(1.05);
 		  }
 
 		}

@@ -63,10 +63,16 @@ const Resume = () => {
                     <h2>My Biographic</h2>
                     <p>Hello my name is: <input value={name} onChange={(e) => setName(e.target.value)}/></p>
                     <p>{introductionText} {getNationalityText(nationality)}</p>
-                    <p>{name.toLowerCase() === 'alejandra' && gender === 1 && nationality === 3 ?
-                        'Seguro eres buena en python :)' :
-                        ''
-                    }</p>
+                    {
+                        name.toLowerCase() === 'alejandra' &&
+                        gender === 1 &&
+                        nationality === 3 ? (
+                            <p className={styles.secret} style={{opacity: 1}}>Seguramente eres buena en python :^)</p>
+
+                        ) : (
+                            <p className={styles.secret} style={{opacity: 0}}></p>
+                        )
+                    }
                     <button>Create</button>
                 </article>
             </section>
