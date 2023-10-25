@@ -23,9 +23,9 @@ const Resume = () => {
 
         genderAndBase: {
             "0-0": "I'm a human.",
-            "0-1": "I'm a cat-person.",
+            "0-1": "I'm a cat.",
             "1-0": "I'm a human.",
-            "1-1": "I'm a cat-woman."
+            "1-1": "I'm a cat."
         } as Record<string, string>,
 
         nationality: {
@@ -66,6 +66,7 @@ const Resume = () => {
                     {
                         name.toLowerCase() === 'alejandra' &&
                         gender === 1 &&
+                        base === 0 &&
                         nationality === 3 ? (
                             <p className={styles.secret} style={{opacity: 1}}>Seguramente eres buena en python :^)</p>
 
