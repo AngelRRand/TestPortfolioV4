@@ -11,3 +11,8 @@ export interface SelectorOption {
     onSelect: () => void
 }
 
+export interface ContainerPages {
+    children: JSX.Element | JSX.Element[];
+    styleContainer: string;
+    styleStart: string;
+}

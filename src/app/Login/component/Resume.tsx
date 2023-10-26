@@ -4,6 +4,7 @@ import Avatar from "@/src/component/avatar/Avatar";
 import {useSelector} from "react-redux";
 import {RootState} from "@/src/redux";
 import useLocalStorage from "@/src/hooks/useLocalStorage";
+import Link from "next/link";
 
 const Resume = () => {
     const [name, setName] = useLocalStorage('name', '');
@@ -74,7 +75,9 @@ const Resume = () => {
                             <p className={styles.secret} style={{opacity: 0}}></p>
                         )
                     }
-                    <button>Create</button>
+                    <Link href={"/"}>
+                        <button>Create</button>
+                    </Link>
                 </article>
             </section>
         </div>

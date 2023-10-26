@@ -1,0 +1,34 @@
+.containerLogin {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerHome {
+  display: flex;
+  height: 200vh;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.star {
+  top: 0;
+  right: 0;
+  z-index: 0;
+  object-fit: fill;
+}
+
+.starHome {
+  height: 230%;
+  width: 100%;
+  position: absolute;
+}
+
+.starLogin {
+  height: 310%;
+  width: 120%;
+  position: fixed;
+}

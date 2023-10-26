@@ -29,9 +29,9 @@ const EditNationality: React.FC<editNacionality> = ({nationality, language}) => 
                         priority
                         className={styles.flag}
                     />
+                    <p className={styles.name}>{language.name}</p>
                 </article>
 
-                <p className={styles.name}>{language.name}</p>
             </section>
             <section>
                 <article>

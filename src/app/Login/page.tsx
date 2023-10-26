@@ -3,7 +3,6 @@ import React, {useEffect, useState} from 'react';
 import EditNationality from './component/EditNationality';
 import EditCharacter from './component/EditCharacter';
 import Resume from './component/Resume';
-import Stars from '@/src/component/stars/Stars';
 import {soundEffect} from '@/src/helper';
 import {Dispatch, RootState} from '@/src/redux';
 import {useDispatch, useSelector} from 'react-redux';
@@ -11,6 +10,7 @@ import {setSelectColor} from '@/src/redux/reducer/avatar';
 
 import language from '@create_character/language.json';
 import styles from './Login.module.scss';
+import ContainerPage from "@/src/component/container/ContainerPage";
 
 export default function page() {
     const [section, setSection] = useState('identity');
@@ -45,9 +45,8 @@ export default function page() {
     };
 
     return (
-        <main className={styles.container}>
-            <Stars/>
-            <section className={styles.navegation}>
+        <ContainerPage styleContainer={'containerLogin'} styleStart={'starLogin'}>
+            <section className={styles.navigation}>
                 <h1
                     className={section === 'identity' ? styles.textShadowActive : styles.textShadowInactive}
                     onClick={() => selectSection('identity')}
@@ -73,7 +72,7 @@ export default function page() {
                     <Resume/>
                 )}
             </div>
-        </main>
+        </ContainerPage>
     );
 }
 

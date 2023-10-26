@@ -1,19 +1,20 @@
 "use client"
-import { useEffect } from "react";
+import React from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
-import { redirect } from "next/navigation";
+import {redirect} from "next/navigation";
+import ContainerPage from "@/src/component/container/ContainerPage";
 
 
 export default function Home() {
-  const [name, setName] = useLocalStorage('name', '');
-  
-  if (name === '') {
-    redirect("/Login")
-  }
+    const [name, setName] = useLocalStorage('name', '');
 
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    if (name === '') {
+        redirect("/Login")
+    }
 
-    </main>
-  )
+    return (
+        <ContainerPage styleContainer={'containerHome'} styleStart={'starHome'}>
+            <h1 style={{color: 'white', fontSize: '4.5rem'}}>Hola</h1>
+        </ContainerPage>
+    )
 }
