@@ -7,7 +7,7 @@ const ContainerPage: React.FC<ContainerPages> = ({styleContainer, styleStart, ch
 
 
     return (
-        <main className={`${styles[styleContainer]}`}>
+        <main className={`${styles[styleContainer]} ${styles.container}`}>
             <Image
                 width={100}
                 height={100}

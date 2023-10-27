@@ -1,17 +1,17 @@
-.containerLogin {
+.container {
   display: flex;
-  height: 100vh;
+  width: 100%;
   justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 
+.containerLogin {
+  height: 100vh;
+}
+
 .containerHome {
-  display: flex;
-  height: 200vh;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+  height: 250vh;
 }
 
 .star {
@@ -22,7 +22,7 @@
 }
 
 .starHome {
-  height: 230%;
+  height: 250%;
   width: 100%;
   position: absolute;
 }
