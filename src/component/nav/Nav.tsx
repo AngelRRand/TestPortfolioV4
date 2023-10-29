@@ -27,16 +27,20 @@ const Nav = () => {
     return (
         <header>
             <nav className={styles.container}>
-                <div className={styles.navAvatar}>
-                    <Avatar
-                        gender={gender}
-                        base={base}
-                        hair={hair}
-                        hairColor={hairColor}
-                        suit={suit}
-                    />
+                <div className={styles.containerAvatar}>
+                    <div className={styles.navAvatar}>
+                        <Avatar
+                            gender={gender}
+                            base={base}
+                            hair={hair}
+                            hairColor={hairColor}
+                            suit={suit}
+                        />
+                    </div>
                     <h1 style={{color: 'white'}}>{nameAvatar}</h1>
+
                 </div>
+
                 <h1 style={{color: 'white'}}>{nameAvatar}</h1>
                 <h1 style={{color: 'white'}}>{nameAvatar}</h1>
 

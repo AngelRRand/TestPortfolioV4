@@ -9,15 +9,24 @@
   z-index: 1000000;
   border-top: 3px solid white;
 
-  .navAvatar {
-	outline: 4px solid white;
-	border: 7px solid var(--streak);
+  .containerAvatar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	width: 15vw;
-	height: 15vw;
-	background-color: white;
-	position: absolute;
-	bottom: 0;
+
+	.navAvatar {
+	  outline: 2px solid white;
+	  border: 3px solid var(--streak);
+	  width: 15vw;
+	  height: 15vw;
+	  background-color: white;
+	  position: absolute;
+	  bottom: 10.5vh;
+	}
   }
+
 
   h1 {
 	margin-left: 10px;
