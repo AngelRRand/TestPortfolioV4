@@ -13,6 +13,7 @@ import {avatarHairMap} from "@/src/interface/avatar";
 
 const HumanColors: React.FC<avatarHairMap> = ({colors, hair, gender}) => {
 
+    console.log(colors)
     let colorsMap: any = []
 
     if (gender === 1) {

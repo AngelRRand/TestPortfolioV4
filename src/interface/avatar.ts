@@ -40,6 +40,7 @@ export interface avatar {
     hair: number;
     hairColor: number;
     suit: number;
+    colors: colors
 }
 
 export interface avatarHairMap {

@@ -4,18 +4,14 @@ import Image from 'next/image';
 import HumanColors from './hair/human/HumanColors';
 import CatColors from './hair/cat/CatColors';
 
-import {useSelector} from "react-redux";
-import {RootState} from "@/src/redux";
-
 import {avatar} from "@/src/interface/avatar";
 
 import data from "../../../public/assets/create_character/data.json"
 
-const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit}) => {
+const Avatar: React.FC<avatar> = ({children, gender, base, hair, hairColor, suit, colors}) => {
 
 
     let raza = data[base]
-    const colors = useSelector((state: RootState) => state.avatar.colors);
 
 
     if (raza.name === "Human") {
