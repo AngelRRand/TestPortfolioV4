@@ -5,10 +5,13 @@ import {useSelector} from "react-redux";
 import {RootState} from "@/src/redux";
 import useLocalStorage from "@/src/hooks/useLocalStorage";
 import Link from "next/link";
+import useLocalStorageAvatar from "@/src/hooks/useLocalStorageAvatar";
 
 const Resume = () => {
-    const [name, setName] = useLocalStorage('name', '');
     const avatar = useSelector((state: RootState) => state.avatar);
+
+    const [name, setName] = useLocalStorage('name', '');
+    const [avatarStorage, setAvatar] = useLocalStorageAvatar("avatar", avatar);
 
     const {
         gender,
@@ -76,7 +79,10 @@ const Resume = () => {
                         )
                     }
                     <Link href={"/"}>
-                        <button>Create</button>
+                        <button
+                            onClick={() => setAvatar(avatar)}
+                        >Create
+                        </button>
                     </Link>
                 </article>
             </section>
