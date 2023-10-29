@@ -27,7 +27,7 @@ const Nav = () => {
     return (
         <header>
             <nav className={styles.container}>
-                <div>
+                <div className={styles.navAvatar}>
                     <Avatar
                         gender={gender}
                         base={base}

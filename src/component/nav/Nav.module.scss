@@ -9,6 +9,16 @@
   z-index: 1000000;
   border-top: 3px solid white;
 
+  .navAvatar {
+	outline: 4px solid white;
+	border: 7px solid var(--streak);
+	width: 15vw;
+	height: 15vw;
+	background-color: white;
+	position: absolute;
+	bottom: 0;
+  }
+
   h1 {
 	margin-left: 10px;
 	margin-right: 10px;
