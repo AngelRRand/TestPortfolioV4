@@ -5,12 +5,14 @@ import useLocalStorage from "@/src/hooks/useLocalStorage";
 import Avatar from "@/src/component/avatar/Avatar";
 import {useSelector} from "react-redux";
 import {RootState} from "@/src/redux";
+import useLocalStorageAvatar from "@/src/hooks/useLocalStorageAvatar";
 
 const Nav = () => {
     const [name, setName] = useLocalStorage('name', '');
     const [nameAvatar, setNameAvatar] = useState('');
+    const [avatar, setAvatar] = useLocalStorageAvatar("avatar", null)
 
-    const avatar = useSelector((state: RootState) => state.avatar);
+    const reduxAvatar = useSelector((state: RootState) => state.avatar);
 
     const {
         gender,
@@ -18,7 +20,7 @@ const Nav = () => {
         hair,
         hairColor,
         suit,
-    } = avatar;
+    } = avatar || reduxAvatar;
 
     useEffect(() => {
         setNameAvatar(name)
