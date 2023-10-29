@@ -1,5 +1,54 @@
 [
   {
-    "Link": "/About"
+    "title": "About",
+    "link": "/about",
+    "planet": {
+      "img": "/assets/home/planetAbout.png",
+      "alt": "planet about"
+    },
+    "pointer": {
+      "img": "/assets/home/pointer.gif",
+      "alt": "pointer"
+    },
+    "style": "home_about"
+  },
+  {
+    "title": "Education",
+    "link": "/education",
+    "planet": {
+      "img": "/assets/home/planetEducation.png",
+      "alt": "planet education"
+    },
+    "pointer": {
+      "img": "/assets/home/pointer.gif",
+      "alt": "pointer"
+    },
+    "style": "home_education"
+  },
+  {
+    "title": "Project",
+    "link": "/project",
+    "planet": {
+      "img": "/assets/home/planetProjects.png",
+      "alt": "planet project"
+    },
+    "pointer": {
+      "img": "/assets/home/pointer.gif",
+      "alt": "pointer"
+    },
+    "style": "home_projects"
+  },
+  {
+    "title": "Networks",
+    "link": "https://www.linkedin.com/in/horacio-cba/",
+    "planet": {
+      "img": "/assets/home/planetNet.png",
+      "alt": "planet network"
+    },
+    "pointer": {
+      "img": "/assets/home/pointer.gif",
+      "alt": "pointer"
+    },
+    "style": "home_net"
   }
 ]

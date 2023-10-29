@@ -16,3 +16,17 @@ export interface ContainerPages {
     styleContainer: string;
     styleStart: string;
 }
+
+export interface LinkPlanet {
+    title: string;
+    link: string;
+    planet: {
+        img: string;
+        alt: string;
+    };
+    pointer: {
+        img: string;
+        alt: string;
+    };
+    style: string;
+}

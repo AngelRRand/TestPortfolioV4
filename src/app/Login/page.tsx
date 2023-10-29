@@ -12,7 +12,7 @@ import language from '@create_character/language.json';
 import styles from './Login.module.scss';
 import ContainerPage from "@/src/component/container/ContainerPage";
 
-export default function page() {
+export default function Login() {
     const [section, setSection] = useState('identity');
     const [isLoading, setIsLoading] = useState(true); // Add a state variable for loading
 

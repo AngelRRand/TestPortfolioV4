@@ -97,3 +97,24 @@ declare module '@create_character/flags.json' {
 
     export default language;
 }
+
+declare module '@home/planetsIcons.json' {
+
+    interface Planet {
+        title: string;
+        link: string;
+        planet: {
+            img: string;
+            alt: string;
+        };
+        pointer: {
+            img: string;
+            alt: string;
+        };
+        style: string;
+    }
+
+    const links: Planet[];
+
+    export default links;
+}
