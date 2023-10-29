@@ -12,9 +12,8 @@ const LinkPlanet: React.FC<LinkPlanet> = ({link, title, planet, pointer, style})
             <Image
                 src={planet.img}
                 alt={planet.alt}
-                width={30}
-                height={30}
-                layout='responsive'
+                width={100}
+                height={100}
             />
             <span className='text_señal'>{title}</span>
             <Image
