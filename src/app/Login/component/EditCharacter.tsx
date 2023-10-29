@@ -4,15 +4,14 @@ import Image from 'next/image';
 // Components
 import Selector from './Selector';
 import Avatar from '@/src/component/avatar/Avatar';
-import SwitchGender from "../component/editCharacter/SwitchGender";
 import SpriteBox from "@/src/component/sprite/SpriteBox";
+import SwitchGender from "./editCharacter/SwitchGender";
 
 // Redux - Interface
 import {editCharacter} from "@/src/interface/avatar";
 import {Dispatch, RootState} from "@/src/redux";
 import {useDispatch, useSelector} from "react-redux";
 import {setBase, setHair, setSelectColor, setSuit} from "@/src/redux/reducer/avatar";
-
 // Style
 import styles from './EditCharacter.module.scss';
 

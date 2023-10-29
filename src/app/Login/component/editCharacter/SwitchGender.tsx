@@ -1,4 +1,5 @@
-import styles from "@/src/app/login/component/EditCharacter.module.scss";
+import styles from '../EditCharacter.module.scss';
+
 import Image from "next/image";
 import React from "react";
 import {setGender} from "@/src/redux/reducer/avatar";
