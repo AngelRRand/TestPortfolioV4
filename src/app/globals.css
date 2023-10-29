@@ -2,7 +2,7 @@
 
 :root {
     --streak: rgb(26, 23, 21);
-    --streakDark: #11100e;
+    --streakDark: rgb(21, 19, 18);
 }
 
 * {
