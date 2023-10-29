@@ -20,7 +20,7 @@ body {
     margin: 0;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background: var(--streakDark);
+    background: black;
 }
 
 

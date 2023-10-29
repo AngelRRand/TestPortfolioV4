@@ -4,7 +4,7 @@ import Image from 'next/image';
 // Components
 import Selector from './Selector';
 import Avatar from '@/src/component/avatar/Avatar';
-import SwitchGender from "@/src/app/Login/component/editCharacter/SwitchGender";
+import SwitchGender from "../component/editCharacter/SwitchGender";
 import SpriteBox from "@/src/component/sprite/SpriteBox";
 
 // Redux - Interface
