@@ -40,10 +40,11 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
         hairColor,
         suit,
         selectColor,
+        colors
     } = avatar;
 
 
-    const handleSwich = () => {
+    const handleSwitch = () => {
         soundEffect('/assets/sounds/btn.mp3')
         if (!show) {
             setBtnSwitch("url(/assets/icon/create_character/btnSwitchFondoActive.svg)")
@@ -53,7 +54,6 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
         setShow(!show)
     }
 
-    console.log(gender)
 
     return (
         <div className={styles.container}>
@@ -80,11 +80,12 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                         hair={hair}
                         suit={suit}
                         hairColor={hairColor}
+                        colors={colors}
                     >
 
                         <div
                             style={{backgroundImage: btnSwitch}}
-                            onClick={() => handleSwich()} className={styles.switch}
+                            onClick={() => handleSwitch()} className={styles.switch}
                         >
                             <Image
                                 src={'/assets/icon/create_character/btnSwitch.svg'}
@@ -124,6 +125,7 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                                                 hair={hair}
                                                 suit={suit}
                                                 hairColor={hairColor}
+                                                colors={colors}
 
                                             />
                                             <h4 className={base === i ? styles.textShadowActive : styles.textShadowInactive}>{language.races[gender][i]}</h4>
@@ -142,6 +144,7 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                                                     hair={i}
                                                     suit={suit}
                                                     hairColor={i}
+                                                    colors={colors}
 
                                                 />
                                                 <h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{language.looks[i]}</h4>
@@ -158,6 +161,7 @@ const EditCharacter: React.FC<editCharacter> = ({language}) => {
                                                     hair={hair}
                                                     suit={i}
                                                     hairColor={hairColor}
+                                                    colors={colors}
                                                 />
                                                 <h4 className={hair === i ? styles.textShadowActive : styles.textShadowInactive}>{language.styles[i]}</h4>
                                             </article>

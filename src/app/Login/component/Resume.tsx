@@ -19,7 +19,8 @@ const Resume = () => {
         hair,
         hairColor,
         suit,
-        nationality
+        nationality,
+        colors
     } = avatar;
 
     const textOptions = {
@@ -55,11 +56,14 @@ const Resume = () => {
     return (
         <div className={styles.container}>
             <section>
-                <Avatar gender={gender}
-                        base={base}
-                        hair={hair}
-                        suit={suit}
-                        hairColor={hairColor}
+                <Avatar
+                    gender={gender}
+                    base={base}
+                    hair={hair}
+                    suit={suit}
+                    hairColor={hairColor}
+                    colors={colors}
+
                 />
             </section>
             <section>
