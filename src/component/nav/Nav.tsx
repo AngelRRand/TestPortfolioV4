@@ -14,7 +14,7 @@ const Nav = () => {
     const [avatar, setAvatar] = useLocalStorageAvatar("avatar", null)
 
     const reduxAvatar = useSelector((state: RootState) => state.avatar);
-
+    // a
     const {
         gender,
         base,
