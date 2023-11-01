@@ -14,7 +14,6 @@ const Nav = () => {
     const [avatar, setAvatar] = useLocalStorageAvatar("avatar", null)
 
     const reduxAvatar = useSelector((state: RootState) => state.avatar);
-    // a
     const {
         gender,
         base,
@@ -49,7 +48,6 @@ const Nav = () => {
                         </div>
                         <Link href={"/login"}>Login</Link>
 
-                        <h1 style={{color: 'white'}}>{nameAvatar}</h1>
 
                     </nav>
                 ) : (
