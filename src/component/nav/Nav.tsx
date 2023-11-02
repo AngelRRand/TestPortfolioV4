@@ -43,7 +43,7 @@ const Nav = () => {
                                     colors={colors}
                                 />
                             </div>
-                            <h1 style={{color: 'white'}}>{nameAvatar}</h1>
+                            <h1>{nameAvatar}</h1>
 
                         </div>
                         <Link href={"/login"}>Login</Link>
